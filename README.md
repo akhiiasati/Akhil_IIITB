@@ -1,11 +1,11 @@
 # DAY 0
-# Software Installation
+<h2>Software Installation</h2>
 <details>
-<summary>Icarus verilog</summary>
+<summary><mark>Icarus verilog</mark></summary>
+    
+<p>Icarus Verilog (iverilog) is a popular open-source Verilog simulator. It allows you to compile and simulate Verilog code, making it a valuable tool for hardware description language (HDL) development and testing.
 
-Icarus Verilog (iverilog) is a popular open-source Verilog simulator. It allows you to compile and simulate Verilog code, making it a valuable tool for hardware description language (HDL) development and testing.
-
-To install Icarus Verilog on Ubuntu, use the following command in the terminal:
+To install Icarus Verilog on Ubuntu, use the following command in the terminal:</p>
 
 ```bash
 $ sudo apt-get update
@@ -16,16 +16,12 @@ Screenshot after installation-
 ![Iverilog](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/42339d5f-e006-4a2f-881b-b84fcbe3af7a)
 
 </details>
-
-
-
-
-
-
 <details>
-<summary>Yosys</summary>
+<summary><h4>Yosys</h4></summary>
 
-Yosys is installed using the following set of steps.
+<p>Yosys is a powerful open-source tool for Verilog synthesis. It allows you to convert RTL (Register Transfer Level) code written in Verilog into a gate-level representation, such as a netlist. This netlist can then be used for further analysis, optimization, and implementation in various digital design flows.
+
+To install Yosys on Ubuntu, use the following command in the terminal:</p>
 
 ```bash
 $ git clone https://github.com/YosysHQ/yosys.git
