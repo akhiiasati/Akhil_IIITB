@@ -98,7 +98,9 @@ Screenshot after installation-
 
 <details>
 <summary>NGSpice</summary>
-NGSpice is installed using the following commands.
+<p>NGSpice (Next Generation Spice) is an open-source electronic circuit simulator that is widely used for analog, digital, and mixed-signal circuit simulations. It is based on the original SPICE (Simulation Program with Integrated Circuit Emphasis) simulator, which was developed at the University of California, Berkeley, in the 1970s.</p>    
+
+<p>To install NGspice on Ubuntu, use the following command in the terminal: </p>
 
 After downloading the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, unpack it using:
 
@@ -112,14 +114,18 @@ $ make
 $ sudo make install
 ```
 Screenshot after installation-
-![ngspice](https://github.com/Shant1R/Shant_IIITB/assets/59409568/726fcc95-63eb-4089-87e3-f306cc37d83c)
+
+![ngspice](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/0a0f66d0-e963-4203-bf73-a3a48acfd93c)
+
 
     
 </details>
 
 <details>
 <summary>Magic</summary>
-Magic is installed using the following commands.
+ <p>Magic is an open-source VLSI (Very-Large-Scale Integration) layout tool used in Electronic Design Automation (EDA) for the physical design of integrated circuits. It is primarily focused on the layout and design of digital and analog circuits. Magic is widely used in academia and research communities for designing integrated circuits at various levels of abstraction.</p>   
+
+<p>To install Magic on Ubuntu, use the following command in the terminal: </p>
 
 ```bash
 $   sudo apt-get install m4
