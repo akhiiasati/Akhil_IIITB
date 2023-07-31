@@ -144,13 +144,16 @@ $   sudo make install
 
 ```
 Screenshot after installation-
-![magic](https://github.com/Shant1R/Shant_IIITB/assets/59409568/f5fe09ee-2f15-47c0-b4a6-5a41febf7e76)
+![Screenshot from 2023-07-31 21-35-44](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/cefda874-22ed-4b78-ae7a-c4b150fd31f3)
     
 </details>
 
 <details>
 <summary>OpenLANE</summary>
-OpenLane is installed using the following commands.
+    <br>
+    <p>OpenLANE is an open-source ASIC (Application-Specific Integrated Circuit) design flow that aims to automate the entire digital chip design process, from RTL (Register Transfer Level) synthesis to GDSII (Graphic Data System II) layout, and it includes all the steps in between. The project is developed by the VLSI CAD Group at the University of California, Los Angeles (UCLA), and it is part of the larger OpenROAD (Open Research for Advanced Chip Design) initiative.</p>
+    
+<p>To install OpenLANE on Ubuntu, use the following command in the terminal: </p>
 
 ```bash
 $ sudo apt-get update
