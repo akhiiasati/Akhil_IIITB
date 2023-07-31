@@ -1,6 +1,8 @@
 # DAY 0
 <h2>Software Installation</h2>
-<details>
+
+<details > 
+    
 <summary><mark>Icarus verilog</mark></summary>
     
 <p>Icarus Verilog (iverilog) is a popular open-source Verilog simulator. It allows you to compile and simulate Verilog code, making it a valuable tool for hardware description language (HDL) development and testing.
@@ -36,7 +38,7 @@ $ make
 $ sudo make install
 ```
 Screenshot after installation-
-![yosys](https://github.com/Shant1R/Shant_IIITB/assets/59409568/6ac97051-4660-4722-b384-26eb6aba3260)
+![Yosys](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/edca2369-c785-4b3e-80ef-b768361f0444)
 
 
 </details>
