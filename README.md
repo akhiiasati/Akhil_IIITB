@@ -13,11 +13,11 @@ $ sudo apt-get install iverilog
 
 ```
 Screenshot after installation-
-![Iverilog](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/42339d5f-e006-4a2f-881b-b84fcbe3af7a)
+![iverilog](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/dd7e5d71-c77c-4709-a943-dcd79d88957a)
 
 </details>
 <details>
-<summary><h4>Yosys</h4></summary>
+<summary>Yosys</summary>
 
 <p>Yosys is a powerful open-source tool for Verilog synthesis. It allows you to convert RTL (Register Transfer Level) code written in Verilog into a gate-level representation, such as a netlist. This netlist can then be used for further analysis, optimization, and implementation in various digital design flows.
 
@@ -37,22 +37,6 @@ $ sudo make install
 ```
 Screenshot after installation-
 ![yosys](https://github.com/Shant1R/Shant_IIITB/assets/59409568/6ac97051-4660-4722-b384-26eb6aba3260)
-
-
-</details>
-
-<details>
-<summary>Icarus verilog</summary>
-
-Icarus Verilog also known as iverilog is installed using the following command.
-
-```bash
-$ sudo apt-get update
-$ sudo apt-get install iverilog
-
-```
-Screenshot after installation-
-![iverilog](https://github.com/Shant1R/Shant_IIITB/assets/59409568/4f77ee22-b0b3-4c96-9f8e-1b74443579e4)
 
 
 </details>
