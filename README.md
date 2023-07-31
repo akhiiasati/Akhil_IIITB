@@ -4,7 +4,7 @@
 <details > 
     
 <summary><mark>Icarus verilog</mark></summary>
-    
+ <br>   
 <p>Icarus Verilog (iverilog) is a popular open-source Verilog simulator. It allows you to compile and simulate Verilog code, making it a valuable tool for hardware description language (HDL) development and testing.
 
 To install Icarus Verilog on Ubuntu, use the following command in the terminal:</p>
@@ -20,7 +20,7 @@ Screenshot after installation-
 </details>
 <details>
 <summary>Yosys</summary>
-
+<br>
 <p>Yosys is a powerful open-source tool for Verilog synthesis. It allows you to convert RTL (Register Transfer Level) code written in Verilog into a gate-level representation, such as a netlist. This netlist can then be used for further analysis, optimization, and implementation in various digital design flows.
 
 To install Yosys on Ubuntu, use the following command in the terminal:</p>
@@ -45,7 +45,8 @@ Screenshot after installation-
 
 <details>
 <summary>GTKWave</summary>
-<p>
+    <br>
+<p> 
 GTKWave is a popular open-source waveform viewer for digital and analog electronic circuits. It is commonly used to visualize and analyze simulation results from digital hardware description languages like VHDL (VHSIC Hardware Description Language) and Verilog.
 
 To install GTKwave on Ubuntu, use the following command in the terminal:</p>
@@ -62,6 +63,7 @@ Screenshot after installation-
 
 <details>
 <summary>OpenSTA</summary></summary>
+<br>
     
 <p>OpenSTA (Open Static Timing Analysis) is an open-source software tool used for Static Timing Analysis (STA) of digital integrated circuits. STA is a crucial step in digital design verification and optimization to ensure that the circuit meets its timing requirements, especially with regard to clock frequency and setup/hold times.
 
@@ -98,6 +100,7 @@ Screenshot after installation-
 
 <details>
 <summary>NGSpice</summary>
+    <br>
 <p>NGSpice (Next Generation Spice) is an open-source electronic circuit simulator that is widely used for analog, digital, and mixed-signal circuit simulations. It is based on the original SPICE (Simulation Program with Integrated Circuit Emphasis) simulator, which was developed at the University of California, Berkeley, in the 1970s.</p>    
 
 <p>To install NGspice on Ubuntu, use the following command in the terminal: </p>
@@ -123,6 +126,7 @@ Screenshot after installation-
 
 <details>
 <summary>Magic</summary>
+    <br>
  <p>Magic is an open-source VLSI (Very-Large-Scale Integration) layout tool used in Electronic Design Automation (EDA) for the physical design of integrated circuits. It is primarily focused on the layout and design of digital and analog circuits. Magic is widely used in academia and research communities for designing integrated circuits at various levels of abstraction.</p>   
 
 <p>To install Magic on Ubuntu, use the following command in the terminal: </p>
@@ -176,7 +180,7 @@ docker run hello-world
 ```
 
 Screenshot after installation-
-![openlane](https://github.com/Shant1R/Shant_IIITB/assets/59409568/d55be32a-a662-4284-94b0-b0d53af2fbca)
+![OpenLANE](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/74d108c4-c5aa-406a-8f40-87b0e71f0c4e)
 
     
 </details>
