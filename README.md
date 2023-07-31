@@ -45,7 +45,7 @@ Screenshot after installation-
 
 <details>
 <summary>GTKWave</summary>
-
+<p>
 GTKWave is a popular open-source waveform viewer for digital and analog electronic circuits. It is commonly used to visualize and analyze simulation results from digital hardware description languages like VHDL (VHSIC Hardware Description Language) and Verilog.
 
 To install GTKwave on Ubuntu, use the following command in the terminal:</p>
@@ -62,8 +62,10 @@ Screenshot after installation-
 
 <details>
 <summary>OpenSTA</summary></summary>
+    
+<p>OpenSTA (Open Static Timing Analysis) is an open-source software tool used for Static Timing Analysis (STA) of digital integrated circuits. STA is a crucial step in digital design verification and optimization to ensure that the circuit meets its timing requirements, especially with regard to clock frequency and setup/hold times.
 
-To install OpenSTA, follow the given github link and download the following prerequisites- 
+To install OpenSTA on Ubuntu, use the following command in the terminal: </p>
 
 ```bash
 https://github.com/The-OpenROAD-Project/OpenSTA
@@ -89,7 +91,7 @@ $ cmake ..
 $ make
 ```
 Screenshot after installation-
-![opensta](https://github.com/Shant1R/Shant_IIITB/assets/59409568/36537253-8d3e-4f7a-9358-35c3f5c04e55)
+![STA](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/1dec98a7-9bf6-4367-bf26-fd42dbc9594a)
 
 </details>
 
