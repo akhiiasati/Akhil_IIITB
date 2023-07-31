@@ -46,14 +46,16 @@ Screenshot after installation-
 <details>
 <summary>GTKWave</summary>
 
-GTKWave is installed using the following commands.
+GTKWave is a popular open-source waveform viewer for digital and analog electronic circuits. It is commonly used to visualize and analyze simulation results from digital hardware description languages like VHDL (VHSIC Hardware Description Language) and Verilog.
+
+To install GTKwave on Ubuntu, use the following command in the terminal:</p>
 
 ```bash
 $ sudo apt update
 $ sudo apt install gtkwave
 ```
 Screenshot after installation-
-![gtkwave](https://github.com/Shant1R/Shant_IIITB/assets/59409568/ae8c7922-c337-4157-839f-c8f1f62265b2)
+![GTKwave](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/210934bb-e8e1-479d-afae-d0d2807e61ed)
 
 </details>
 
