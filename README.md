@@ -184,3 +184,6 @@ Screenshot after installation-
 
     
 </details>
+
+# DAY 1
+<h2> Introduction to Verilog RTL Design and Synthesis </h2>
