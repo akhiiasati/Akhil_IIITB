@@ -1,11 +1,11 @@
 # Physical Design Using ASIC
 <h2> Content </h2>
 <ul>
-    <li><a title="Software Installation">DAY 0: Software Installation</a></li>
-    <li><a href="#">DAY 1: Introduction to Verilog RTL Design and Synthesis</a></li>
+    <li><a href="#Software Installation">DAY 0: Software Installation</a></li>
+    <li><a href="#Introduction to Verilog RTL Design and Synthesis">DAY 1: Introduction to Verilog RTL Design and Synthesis</a></li>
 </ul>    
 # DAY 0
-<h2 title="Software Installation">Software Installation</h2>
+<h2 >Software Installation</h2>
 
 <details > 
     
@@ -192,4 +192,4 @@ Screenshot after installation-
 </details>
 
 # DAY 1
-<h2> Introduction to Verilog RTL Design and Synthesis </h2>
+<h2 id="Introduction to Verilog RTL Design and Synthesis"> Introduction to Verilog RTL Design and Synthesis </h2>
