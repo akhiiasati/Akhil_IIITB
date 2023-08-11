@@ -2,7 +2,7 @@
 
 ## Content
 - [Day 0: Software Installation](#day-0)
-- [GTKWave](#gtkwave)
+- [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1)
 
 ## Day 0
 
@@ -10,7 +10,7 @@
 <p>List of necessary Tools:</p>
 
 - [Icarus Verilog](#icarus-verilog)
-- [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1)
+- [GTKwave](#gtkwave)
 
 ### Icarus Verilog
  <br>   
