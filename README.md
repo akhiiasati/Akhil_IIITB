@@ -18,12 +18,20 @@
   
 
 ### Icarus Verilog
- <br>   
 
+Icarus Verilog is an open-source hardware description language (HDL) compiler and simulator. It allows users to describe digital systems using a hardware description language and simulate their behavior. This brief guide provides an introduction to Icarus Verilog for your GitHub documentation, covering key features, installation, basic usage, and important links.
 
-For installation instructions and usage details, please refer to the appropriate sections in our documentation.
+Key Features:
 
-Please note: While Icarus Verilog itself doesn't include a graphical waveform viewer, you can use external tools like GTKWave to visualize simulation waveforms.
+1.HDL Support: Icarus Verilog supports both Verilog (IEEE Standard 1364) and SystemVerilog (IEEE Standard 1800) hardware description languages.
+
+2.Cross-Platform: It is cross-platform and can be used on various operating systems including Linux, Windows, and macOS.
+
+3.Simulation: Icarus Verilog simulates digital designs, helping users verify their functionality before actual hardware implementation.
+
+4.VCD File Generation: It produces Value Change Dump (VCD) files which allow visualizing waveform simulations in waveform viewer tools.
+
+5.Open-Source: Being open-source, Icarus Verilog encourages community contribution and enhancement.
 
 To install Icarus Verilog on Ubuntu, use the following command in the terminal:</p>
 
@@ -33,6 +41,7 @@ $ sudo apt-get install iverilog
 
 ```
 Screenshot after installation-
+<br>
 ![iverilog](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/dd7e5d71-c77c-4709-a943-dcd79d88957a)
 
 
