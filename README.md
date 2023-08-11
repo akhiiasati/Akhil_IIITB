@@ -297,7 +297,7 @@ RTL (Register Transfer Level) simulation is a fundamental step in digital design
 
 4.Functional Verification: RTL simulation focuses on verifying that the design functions as intended.
 
-![Screenshot (9)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/3be9de91-8d17-4782-8261-236ef262e477)
+![Screenshot (8)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/6847baa6-e0c8-4493-aebe-81e5c52532bd)
 
 ### Testbench
 ### Overview:
