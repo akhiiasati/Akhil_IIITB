@@ -2,7 +2,7 @@
 
 ## Content
 - [Day 0: Software Installation](#day-0)
-- [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1)
+- [GTKWave](#gtkwave)
 
 ## Day 0
 
@@ -12,7 +12,7 @@
 - [Icarus Verilog](#icarus-verilog)
 - [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1)
 
-<summary><mark>Icarus Verilog</mark></summary>
+### Icarus Verilog
  <br>   
 <p>Icarus Verilog (iverilog) is a popular open-source Verilog simulator. It allows you to compile and simulate Verilog code, making it a valuable tool for hardware description language (HDL) development and testing.
 
@@ -52,7 +52,7 @@ Screenshot after installation-
 
 
 
-<summary>GTKWave</summary>
+### GTKWave
     <br>
 <p> 
 GTKWave is a popular open-source waveform viewer for digital and analog electronic circuits. It is commonly used to visualize and analyze simulation results from digital hardware description languages like VHDL (VHSIC Hardware Description Language) and Verilog.
