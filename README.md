@@ -5,12 +5,13 @@
 - [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1)
 
 ## Day 0
-<details > 
-### Software Installation
 
-<details > 
-    
-<summary><mark>Icarus verilog</mark></summary>
+### Software Installation
+<p>List of necessary Tools:</p>
+- [Icarus Verilog](#icarus-verilog)
+- [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1)
+
+<summary><mark>Icarus Verilog</mark></summary>
  <br>   
 <p>Icarus Verilog (iverilog) is a popular open-source Verilog simulator. It allows you to compile and simulate Verilog code, making it a valuable tool for hardware description language (HDL) development and testing.
 
@@ -24,8 +25,7 @@ $ sudo apt-get install iverilog
 Screenshot after installation-
 ![iverilog](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/dd7e5d71-c77c-4709-a943-dcd79d88957a)
 
-</details>
-<details>
+
 <summary>Yosys</summary>
 <br>
 <p>Yosys is a powerful open-source tool for Verilog synthesis. It allows you to convert RTL (Register Transfer Level) code written in Verilog into a gate-level representation, such as a netlist. This netlist can then be used for further analysis, optimization, and implementation in various digital design flows.
@@ -48,9 +48,9 @@ Screenshot after installation-
 ![Yosys](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/edca2369-c785-4b3e-80ef-b768361f0444)
 
 
-</details>
 
-<details>
+
+
 <summary>GTKWave</summary>
     <br>
 <p> 
@@ -65,10 +65,10 @@ $ sudo apt install gtkwave
 Screenshot after installation-
 ![GTKwave](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/210934bb-e8e1-479d-afae-d0d2807e61ed)
 
-</details>
 
 
-<details>
+
+
 <summary>OpenSTA</summary></summary>
 <br>
     
@@ -102,10 +102,10 @@ $ make
 Screenshot after installation-
 ![STA](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/1dec98a7-9bf6-4367-bf26-fd42dbc9594a)
 
-</details>
 
 
-<details>
+
+
 <summary>NGSpice</summary>
     <br>
 <p>NGSpice (Next Generation Spice) is an open-source electronic circuit simulator that is widely used for analog, digital, and mixed-signal circuit simulations. It is based on the original SPICE (Simulation Program with Integrated Circuit Emphasis) simulator, which was developed at the University of California, Berkeley, in the 1970s.</p>    
@@ -129,9 +129,9 @@ Screenshot after installation-
 
 
     
-</details>
 
-<details>
+
+
 <summary>Magic</summary>
     <br>
  <p>Magic is an open-source VLSI (Very-Large-Scale Integration) layout tool used in Electronic Design Automation (EDA) for the physical design of integrated circuits. It is primarily focused on the layout and design of digital and analog circuits. Magic is widely used in academia and research communities for designing integrated circuits at various levels of abstraction.</p>   
@@ -157,9 +157,9 @@ $   sudo make install
 Screenshot after installation-
 ![Screenshot from 2023-07-31 21-35-44](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/cefda874-22ed-4b78-ae7a-c4b150fd31f3)
     
-</details>
 
-<details>
+
+
 <summary>OpenLANE</summary>
     <br>
     <p>OpenLANE is an open-source ASIC (Application-Specific Integrated Circuit) design flow that aims to automate the entire digital chip design process, from RTL (Register Transfer Level) synthesis to GDSII (Graphic Data System II) layout, and it includes all the steps in between. The project is developed by the VLSI CAD Group at the University of California, Los Angeles (UCLA), and it is part of the larger OpenROAD (Open Research for Advanced Chip Design) initiative.</p>
@@ -190,8 +190,8 @@ Screenshot after installation-
 ![OpenLANE](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/74d108c4-c5aa-406a-8f40-87b0e71f0c4e)
 
     
-</details>
-</details> 
+
+ 
 
 ## Day 1
 <h2 id="Introduction to Verilog RTL Design and Synthesis"> Introduction to Verilog RTL Design and Synthesis </h2>
