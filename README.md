@@ -2,7 +2,7 @@
 
 ## Content
 - [Day 0: Software Installation](#day-0-software-installation)
-- [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1)
+- [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
 
 ## Day 0: Software Installation
 
@@ -186,5 +186,4 @@ Screenshot after installation-
 
  
 
-## Day 1
-<h2 id="Introduction to Verilog RTL Design and Synthesis"> Introduction to Verilog RTL Design and Synthesis </h2>
+## Day 1: Introduction to Verilog RTL Design and Synthesis
