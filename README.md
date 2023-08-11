@@ -245,15 +245,15 @@ OpenLANE is an open-source digital RTL to GDSII flow that aims to provide a comp
 
 ### Key Features:
 
-Automated RTL-to-GDSII Flow: OpenLANE automates the entire digital design flow, from RTL synthesis to GDSII layout generation.
+1.Automated RTL-to-GDSII Flow: OpenLANE automates the entire digital design flow, from RTL synthesis to GDSII layout generation.
 
-Open-Source Tools Integration: It integrates various open-source EDA (Electronic Design Automation) tools, enabling a comprehensive and customizable design flow.
+2.Open-Source Tools Integration: It integrates various open-source EDA (Electronic Design Automation) tools, enabling a comprehensive and customizable design flow.
 
-Predictable and Reproducible Results: OpenLANE focuses on producing consistent and reproducible design results across different designs and process nodes.
+3.Predictable and Reproducible Results: OpenLANE focuses on producing consistent and reproducible design results across different designs and process nodes.
 
-Design Exploration: OpenLANE supports design exploration to optimize various design metrics such as area, power, and timing.
+4.Design Exploration: OpenLANE supports design exploration to optimize various design metrics such as area, power, and timing.
 
-Hierarchical Design: It supports hierarchical design methodologies, making it suitable for complex designs.
+5.Hierarchical Design: It supports hierarchical design methodologies, making it suitable for complex designs.
 
 ### Installation:
     
@@ -315,9 +315,7 @@ A testbench is a critical component in digital design and verification. It's use
 ![Screenshot (9)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/de5f3687-5332-47fa-a281-58e63e1ed7c6)
 
 # References:
-1.https://iverilog.fandom.com/wiki/Simulation
-
-2.https://github.com/steveicarus/iverilog
-
-3.http://www.clifford.at/yosys/documentation.html
-
+- https://iverilog.fandom.com/wiki/Simulation
+- https://github.com/steveicarus/iverilog
+- http://www.clifford.at/yosys/documentation.html
+- https://www.vsdiat.com/
