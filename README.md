@@ -8,6 +8,7 @@
 
 ### Software Installation
 <p>List of necessary Tools:</p>
+
 - [Icarus Verilog](#icarus-verilog)
 - [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1)
 
