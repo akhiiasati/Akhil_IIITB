@@ -281,8 +281,10 @@ docker run hello-world
 Screenshot after installation-
 ![OpenLANE](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/74d108c4-c5aa-406a-8f40-87b0e71f0c4e)
 
-    
-
- 
-
 ## Day 1: Introduction to Verilog RTL Design and Synthesis
+
+Simulation is the process of creating models that mimic the behavior of the device you are designing (simulation models) and creating models to exercise the device (test benches). The simulation model need not reflect any understanding of the underlying technology, and the simulator need not know that the design is intended for any specific technology.
+
+The test benches model the world outside the design, so they are rarely destined for real hardware. They are written in Verilog simply as a matter of convenience, and sometimes they are not written in Verilog at all. The test benches are not throw-away code either, as they are used to retest the device under test as it is transformed from a simulation model to a synthesizeable description.
+
+
