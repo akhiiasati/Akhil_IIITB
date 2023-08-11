@@ -17,11 +17,12 @@
 - [OpenLANE](#openlane)
   
 
-### Icarus Verilog
+## Icarus Verilog
 
+### Overview:
 Icarus Verilog is an open-source hardware description language (HDL) compiler and simulator. It allows users to describe digital systems using a hardware description language and simulate their behavior. This brief guide provides an introduction to Icarus Verilog for your GitHub documentation, covering key features, installation, basic usage, and important links.
 
-Key Features:
+### Key Features:
 
 1.HDL Support: Icarus Verilog supports both Verilog (IEEE Standard 1364) and SystemVerilog (IEEE Standard 1800) hardware description languages.
 
@@ -32,6 +33,8 @@ Key Features:
 4.VCD File Generation: It produces Value Change Dump (VCD) files which allow visualizing waveform simulations in waveform viewer tools.
 
 5.Open-Source: Being open-source, Icarus Verilog encourages community contribution and enhancement.
+
+### Installation:
 
 To install Icarus Verilog on Ubuntu, use the following command in the terminal:</p>
 
@@ -45,9 +48,24 @@ Screenshot after installation-
 ![iverilog](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/dd7e5d71-c77c-4709-a943-dcd79d88957a)
 
 
-### Yosys
-<br>
-<p>Yosys is a powerful open-source tool for Verilog synthesis. It allows you to convert RTL (Register Transfer Level) code written in Verilog into a gate-level representation, such as a netlist. This netlist can then be used for further analysis, optimization, and implementation in various digital design flows.
+## Yosys
+
+### Overview:
+Yosys is an open-source framework for Verilog RTL synthesis. It takes RTL (Register Transfer Level) descriptions written in Verilog and transforms them into optimized gate-level representations. This brief guide provides an introduction to Yosys for your GitHub documentation, covering key features, installation, basic usage, and important links.
+
+### Key Features:
+
+1.RTL Synthesis: Yosys performs RTL synthesis, converting high-level RTL code into a gate-level representation suitable for implementation on hardware.
+
+2.Open-Source: Yosys is open-source software, encouraging community collaboration, improvement, and customization.
+
+3.Wide Hardware Support: It supports a wide range of FPGA and ASIC architectures, making it versatile for various hardware design projects.
+
+4.Optimization: Yosys applies various optimization techniques to improve the efficiency and performance of the synthesized hardware.
+
+5.Scriptable Flow: Yosys can be scripted using synthesis scripts written in a simple and powerful scripting language.
+
+### Installation:
 
 To install Yosys on Ubuntu, use the following command in the terminal:</p>
 
