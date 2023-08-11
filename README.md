@@ -14,7 +14,11 @@
 
 ### Icarus Verilog
  <br>   
-<p>Icarus Verilog (iverilog) is a popular open-source Verilog simulator. It allows you to compile and simulate Verilog code, making it a valuable tool for hardware description language (HDL) development and testing.
+
+
+For installation instructions and usage details, please refer to the appropriate sections in our documentation.
+
+Please note: While Icarus Verilog itself doesn't include a graphical waveform viewer, you can use external tools like GTKWave to visualize simulation waveforms.
 
 To install Icarus Verilog on Ubuntu, use the following command in the terminal:</p>
 
