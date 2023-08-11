@@ -3,6 +3,7 @@
 ## Content
 - [Day 0: Software Installation](#day-0-software-installation)
 - [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
+- [References](#references)
 
 ## Day 0: Software Installation
 
@@ -313,5 +314,10 @@ A testbench is a critical component in digital design and verification. It's use
 
 ![Screenshot (9)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/de5f3687-5332-47fa-a281-58e63e1ed7c6)
 
+# References:
+1.https://iverilog.fandom.com/wiki/Simulation
 
+2.https://github.com/steveicarus/iverilog
+
+3.http://www.clifford.at/yosys/documentation.html
 
