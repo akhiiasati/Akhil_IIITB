@@ -44,7 +44,6 @@ $ sudo apt-get install iverilog
 
 ```
 Screenshot after installation-
-<br>
 ![iverilog](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/dd7e5d71-c77c-4709-a943-dcd79d88957a)
 
 
@@ -85,12 +84,26 @@ Screenshot after installation-
 ![Yosys](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/edca2369-c785-4b3e-80ef-b768361f0444)
 
 
-### GTKWave
-    <br>
-<p> 
-GTKWave is a popular open-source waveform viewer for digital and analog electronic circuits. It is commonly used to visualize and analyze simulation results from digital hardware description languages like VHDL (VHSIC Hardware Description Language) and Verilog.
+## GTKWave
 
-To install GTKwave on Ubuntu, use the following command in the terminal:</p>
+### Overview:
+GTKWave is an open-source waveform viewer that allows you to visualize and analyze simulation results in the form of Value Change Dump (VCD) files. It provides an intuitive graphical interface to view waveforms and helps you understand the behavior of digital designs. This brief guide introduces GTKWave for your GitHub documentation, covering key features, installation, basic usage, and important links.
+
+### Key Features:
+
+1.Waveform Visualization: GTKWave provides a user-friendly interface to display and analyze simulation waveforms from VCD files.
+
+2.Zoom and Pan: You can zoom in and out on specific parts of the waveform and pan through the time axis for detailed analysis.
+
+3.Signals Hierarchy: Waveform signals are organized hierarchically, making it easy to navigate and locate specific signals.
+
+4.Color Customization: Customize waveform colors and display options for a personalized viewing experience.
+
+5.Cross-Platform: GTKWave is available for Linux, Windows, and macOS platforms.
+
+### Installation:
+
+To install GTKwave on Ubuntu, use the following command in the terminal:
 
 ```bash
 $ sudo apt update
@@ -100,8 +113,7 @@ Screenshot after installation-
 ![GTKwave](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/210934bb-e8e1-479d-afae-d0d2807e61ed)
 
 
-### OpenSTA
-<br>
+## OpenSTA
     
 <p>OpenSTA (Open Static Timing Analysis) is an open-source software tool used for Static Timing Analysis (STA) of digital integrated circuits. STA is a crucial step in digital design verification and optimization to ensure that the circuit meets its timing requirements, especially with regard to clock frequency and setup/hold times.
 
