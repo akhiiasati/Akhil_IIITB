@@ -1,10 +1,11 @@
 # Physical Design Using ASIC
 
 ## Content
-- [Day 0](#day-0)
+- [Day 0: Software Installation](#day-0)
 - [Day 1](#day-1)
 
 ## Day 0
+<details > 
 ### Software Installation
 
 <details > 
@@ -190,47 +191,7 @@ Screenshot after installation-
 
     
 </details>
+</details> 
 
 ## Day 1
 <h2 id="Introduction to Verilog RTL Design and Synthesis"> Introduction to Verilog RTL Design and Synthesis </h2>
-<details > 
-    
-<summary><mark>Icarus verilog</mark></summary>
- <br>   
-<p>Icarus Verilog (iverilog) is a popular open-source Verilog simulator. It allows you to compile and simulate Verilog code, making it a valuable tool for hardware description language (HDL) development and testing.
-
-To install Icarus Verilog on Ubuntu, use the following command in the terminal:</p>
-
-```bash
-$ sudo apt-get update
-$ sudo apt-get install iverilog
-
-```
-Screenshot after installation-
-![iverilog](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/dd7e5d71-c77c-4709-a943-dcd79d88957a)
-
-</details>
-<details>
-<summary>Yosys</summary>
-<br>
-<p>Yosys is a powerful open-source tool for Verilog synthesis. It allows you to convert RTL (Register Transfer Level) code written in Verilog into a gate-level representation, such as a netlist. This netlist can then be used for further analysis, optimization, and implementation in various digital design flows.
-
-To install Yosys on Ubuntu, use the following command in the terminal:</p>
-
-```bash
-$ git clone https://github.com/YosysHQ/yosys.git
-$ cd yosys-master 
-$ sudo apt install make (If make is not installed please install it) 
-$ sudo apt-get install build-essential clang bison flex \
-    libreadline-dev gawk tcl-dev libffi-dev git \
-    graphviz xdot pkg-config python3 libboost-system-dev \
-    libboost-python-dev libboost-filesystem-dev zlib1g-dev
-$ make config-gcc
-$ make 
-$ sudo make install
-```
-Screenshot after installation-
-![Yosys](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/edca2369-c785-4b3e-80ef-b768361f0444)
-
-
-</details>
