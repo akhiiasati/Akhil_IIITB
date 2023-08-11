@@ -2,7 +2,7 @@
 
 ## Content
 - [Day 0: Software Installation](#day-0)
-- [Day 1](#day-1)
+- [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1)
 
 ## Day 0
 <details > 
