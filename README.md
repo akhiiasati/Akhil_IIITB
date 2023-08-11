@@ -114,10 +114,25 @@ Screenshot after installation-
 
 
 ## OpenSTA
-    
-<p>OpenSTA (Open Static Timing Analysis) is an open-source software tool used for Static Timing Analysis (STA) of digital integrated circuits. STA is a crucial step in digital design verification and optimization to ensure that the circuit meets its timing requirements, especially with regard to clock frequency and setup/hold times.
+  
+### Overview:
+OpenSTA (Static Timing Analysis) is an open-source tool used for analyzing and optimizing the timing performance of digital designs. It performs static timing analysis to ensure that a design meets timing requirements, helping to identify potential issues before fabrication or implementation. This brief guide introduces OpenSTA for your GitHub documentation, covering key features, installation, basic usage, and important links.
 
-To install OpenSTA on Ubuntu, use the following command in the terminal: </p>
+### Key Features:
+
+1.Static Timing Analysis: OpenSTA performs comprehensive timing analysis on digital designs to identify setup, hold, and other timing violations.
+
+2.Path Analysis: It analyzes critical paths in a design to identify areas that require optimization for meeting timing constraints.
+
+3.Constraint Validation: OpenSTA checks the accuracy of timing constraints specified in the design and performs setup and hold time analysis.
+
+4.Report Generation: Detailed timing reports are generated, highlighting violations, paths, and other relevant information.
+
+5.Open-Source: Being open-source, OpenSTA encourages collaboration and community contributions.
+
+### Installation:
+
+To install OpenSTA on Ubuntu, use the following command in the terminal:
 
 ```bash
 https://github.com/The-OpenROAD-Project/OpenSTA
@@ -146,11 +161,26 @@ Screenshot after installation-
 ![STA](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/1dec98a7-9bf6-4367-bf26-fd42dbc9594a)
 
 
-### NGSpice
-    <br>
-<p>NGSpice (Next Generation Spice) is an open-source electronic circuit simulator that is widely used for analog, digital, and mixed-signal circuit simulations. It is based on the original SPICE (Simulation Program with Integrated Circuit Emphasis) simulator, which was developed at the University of California, Berkeley, in the 1970s.</p>    
+## NGSpice
+   
+### Overview:
+NGSpice is an open-source mixed-level/mixed-signal electronic circuit simulator based on the Berkeley SPICE project. It enables users to simulate and analyze analog, digital, and mixed-signal circuits, helping in design validation, analysis, and optimization. This brief guide introduces NGSpice for your GitHub documentation, covering key features, installation, basic usage, and important links.
 
-<p>To install NGspice on Ubuntu, use the following command in the terminal: </p>
+### Key Features:
+
+1.Mixed-Level Simulation: NGSpice supports both analog and digital simulation, making it suitable for mixed-level/mixed-signal designs.
+
+2.Extensive Component Library: It includes a wide range of built-in models for various electronic components, facilitating accurate circuit representation.
+
+3.Transient and Steady-State Analysis: NGSpice can perform transient, DC, AC, and other types of analyses to study circuit behavior over time or at specific operating points.
+
+4.Interactive Plotting: The tool provides interactive plotting capabilities to visualize simulation results through waveform plots.
+
+5.Open-Source: Being open-source, NGSpice encourages community contribution and customization.
+
+### Installation:
+
+To install NGspice on Ubuntu, use the following command in the terminal:
 
 After downloading the tarball from https://sourceforge.net/projects/ngspice/files/ to a local directory, unpack it using:
 
@@ -167,11 +197,26 @@ Screenshot after installation-
 
 ![ngspice](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/0a0f66d0-e963-4203-bf73-a3a48acfd93c)
 
-### Magic
-    <br>
- <p>Magic is an open-source VLSI (Very-Large-Scale Integration) layout tool used in Electronic Design Automation (EDA) for the physical design of integrated circuits. It is primarily focused on the layout and design of digital and analog circuits. Magic is widely used in academia and research communities for designing integrated circuits at various levels of abstraction.</p>   
+## Magic
+  
+### Overview:
+Magic is an open-source VLSI layout tool used for designing and analyzing integrated circuits (ICs). It provides a versatile environment for drawing and manipulating physical layouts of circuits, helping engineers and designers visualize and verify the layout of their designs. This brief guide introduces Magic for your GitHub documentation, covering key features, installation, basic usage, and important links.
 
-<p>To install Magic on Ubuntu, use the following command in the terminal: </p>
+### Key Features:
+
+1.Physical Layout Design: Magic allows you to create and manipulate physical layouts of ICs, including transistors, wires, vias, and other components.
+
+2.GDSII Format Support: It supports the GDSII (Graphic Data System II) format, enabling seamless integration with other EDA tools in the IC design flow.
+
+3.Hierarchy and Hierarchical Editing: Magic supports hierarchical design, making it suitable for both small and complex designs.
+
+4.Design Rule Checking (DRC): Magic can perform basic design rule checking to identify violations and ensure layout conformity.
+
+5.Interactive Layout Editing: The interactive GUI allows you to modify and optimize layouts in real-time.
+
+### Installation:
+
+To install Magic on Ubuntu, use the following command in the terminal:
 
 ```bash
 $   sudo apt-get install m4
@@ -192,11 +237,26 @@ $   sudo make install
 Screenshot after installation-
 ![Screenshot from 2023-07-31 21-35-44](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/cefda874-22ed-4b78-ae7a-c4b150fd31f3)
     
-### OpenLANE
-    <br>
-    <p>OpenLANE is an open-source ASIC (Application-Specific Integrated Circuit) design flow that aims to automate the entire digital chip design process, from RTL (Register Transfer Level) synthesis to GDSII (Graphic Data System II) layout, and it includes all the steps in between. The project is developed by the VLSI CAD Group at the University of California, Los Angeles (UCLA), and it is part of the larger OpenROAD (Open Research for Advanced Chip Design) initiative.</p>
+## OpenLANE
+   
+### Overview:
+OpenLANE is an open-source digital RTL to GDSII flow that aims to provide a complete, automated, and predictable path for designing digital integrated circuits. It encompasses various open-source tools and methodologies to automate the design process from RTL (Register Transfer Level) to the final layout for manufacturing. This brief guide introduces OpenLANE for your GitHub documentation, covering key features, installation, basic usage, and important links.
+
+### Key Features:
+
+Automated RTL-to-GDSII Flow: OpenLANE automates the entire digital design flow, from RTL synthesis to GDSII layout generation.
+
+Open-Source Tools Integration: It integrates various open-source EDA (Electronic Design Automation) tools, enabling a comprehensive and customizable design flow.
+
+Predictable and Reproducible Results: OpenLANE focuses on producing consistent and reproducible design results across different designs and process nodes.
+
+Design Exploration: OpenLANE supports design exploration to optimize various design metrics such as area, power, and timing.
+
+Hierarchical Design: It supports hierarchical design methodologies, making it suitable for complex designs.
+
+### Installation:
     
-<p>To install OpenLANE on Ubuntu, use the following command in the terminal: </p>
+To install OpenLANE on Ubuntu, use the following command in the terminal:
 
 ```bash
 $ sudo apt-get update
