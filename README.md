@@ -289,6 +289,9 @@ Screenshot after installation-
   -  [Labs using Iverilog and GTKwave](#labs-using-iverilog-and-gtkwave)
 
 ## Part A: Introduction to open-source simulator iverilog
+
+In the context of Icarus Verilog (iverilog), a simulator refers to the software component of the tool that is responsible for executing and simulating the behavior of digital designs described using the Verilog hardware description language. The simulator emulates the operation of the digital circuit described in the Verilog code, allowing designers to test and verify their designs before moving to physical implementation.
+
 ### Introduction to Iverilog Design Testbench
 ### Simulation
 ### Overview:
