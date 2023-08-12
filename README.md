@@ -284,8 +284,9 @@ Screenshot after installation-
 
 ## Day 1: Introduction to Verilog RTL Design and Synthesis
 
-- [Part A: Introduction to Iverilog Design Testbench](#part-A-introduction-to-iverilog-design-testbench)
-  - [Part B: Labs using Iverilog and GTKwave](#part-A-introduction-to-iverilog-design-testbench)
+- [Part A: Introduction to open-source simulator iverilog](#part-A-introduction-to-open-source-simulator-iverilog)
+  -  [Introduction to Iverilog Design Testbench](#introduction-to-iverilog-design-testbench)
+  -  [Labs using Iverilog and GTKwave](#part-A-introduction-to-iverilog-design-testbench)
 
 ### Part A: Introduction to Iverilog Design Testbench
 ### Simulation
@@ -317,6 +318,8 @@ A testbench is a critical component in digital design and verification. It's use
 3.Inputs and Outputs: Testbenches provide inputs to your design and capture its outputs to compare against expected results.
 
 ![Screenshot (9)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/de5f3687-5332-47fa-a281-58e63e1ed7c6)
+
+### Labs using Iverilog and GTKwave
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
