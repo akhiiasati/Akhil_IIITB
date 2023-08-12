@@ -306,7 +306,8 @@ RTL (Register Transfer Level) simulation is a fundamental step in digital design
 
 ![Screenshot (8)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/6847baa6-e0c8-4493-aebe-81e5c52532bd)
 
-### Testbench
+### Testbench:
+
 ### Overview:
 A testbench is a critical component in digital design and verification. It's used to simulate and validate the behavior of your digital design, ensuring its correctness before hardware implementation. This brief guide introduces testbenches for your GitHub documentation, covering key concepts, types, creation, and important links.
 
