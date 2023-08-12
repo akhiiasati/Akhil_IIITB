@@ -284,6 +284,10 @@ Screenshot after installation-
 
 ## Day 1: Introduction to Verilog RTL Design and Synthesis
 
+- [Part A: Introduction to Iverilog Design Testbench](#part-A-introduction-to-iverilog-design-testbench)
+  - [Part B: Labs using Iverilog and GTKwave](#part-A-introduction-to-iverilog-design-testbench)
+
+### Part A: Introduction to Iverilog Design Testbench
 ### Simulation
 ### Overview:
 RTL (Register Transfer Level) simulation is a fundamental step in digital design verification. It involves simulating the behavior of a digital design at the register transfer level, which focuses on the flow of data between registers. This process helps ensure the correctness and functionality of the design before proceeding to further stages of the design flow. This brief guide introduces RTL simulation for your GitHub documentation, covering key concepts, tools, steps, and important links.
