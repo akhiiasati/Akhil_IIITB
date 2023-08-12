@@ -290,7 +290,7 @@ Screenshot after installation-
 
 ## Part A: Introduction to open-source simulator iverilog
 
-In the context of Icarus Verilog (iverilog), a simulator refers to the software component of the tool that is responsible for executing and simulating the behavior of digital designs described using the Verilog hardware description language. The simulator emulates the operation of the digital circuit described in the Verilog code, allowing designers to test and verify their designs before moving to physical implementation.
+In Icarus Verilog, a simulator is a core component responsible for emulating the behavior of digital designs described in Verilog code. It allows users to virtually test and validate their designs before proceeding to physical implementation. The simulator compiles Verilog source code, simulates the logical operations of the design, and generates results that aid in functional verification.
 
 ### Introduction to Iverilog Design Testbench
 ### Simulation
