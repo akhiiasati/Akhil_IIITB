@@ -1,4 +1,4 @@
-![image](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/9dd39e60-0466-48e4-9650-c44fac7aa928)![image](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/3653cb62-44c0-4938-82e7-a0cd516cd620)# Physical Design Using ASIC
+# Physical Design Using ASIC
 
 ## Content
 - [Day 0: Software Installation](#day-0-software-installation)
@@ -349,8 +349,8 @@ $ ls -R
 ```
 Using the 'ls -R' command, we can list all files and directories, including those within subdirectories.
 
-After executing the command above, you will see the output displayed in the screenshot below:
-
+After executing the command above, we will see the output displayed in the screenshot below:
+![image](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/9dd39e60-0466-48e4-9650-c44fac7aa928)![image](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/3653cb62-44c0-4938-82e7-a0cd516cd620)
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
 - https://github.com/steveicarus/iverilog
