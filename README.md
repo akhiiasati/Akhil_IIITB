@@ -358,6 +358,13 @@ In the directory /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib, you will fi
 
 (A standard cell library is a collection of predefined and characterized digital logic cells used in integrated circuit (IC) design. These cells are the fundamental building blocks of digital designs, such as CPUs, memory units, and other complex digital systems. Standard cell libraries play a crucial role in enabling efficient and optimized chip design.)
 
+In the directory /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model, you will discover the Verilog model files that we will utilize for our lab exercises.
+
+In the directory /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files, you will find Verilog code files along with their corresponding testbench files, which will be used for our lab activities.
+
+### Iverilog and GTKwave Lab Demonstration:
+
+
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
 - https://github.com/steveicarus/iverilog
