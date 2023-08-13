@@ -350,7 +350,11 @@ $ ls -R
 Using the 'ls -R' command, we can list all files and directories, including those within subdirectories.
 
 After executing the command above, we will see the output displayed in the screenshot below:
-![image](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/9dd39e60-0466-48e4-9650-c44fac7aa928)![image](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/3653cb62-44c0-4938-82e7-a0cd516cd620)
+![Screenshot from 2023-08-13 19-22-43](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/507cbb7a-0300-4b03-bdca-e579e6431170)
+![Screenshot from 2023-08-13 19-25-19](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/c34fb6d4-9cdb-41dc-8f10-d1c35635370a)
+![Screenshot from 2023-08-13 19-25-48](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/751ec771-806e-4220-bb9e-e710de292160)
+
+
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
 - https://github.com/steveicarus/iverilog
