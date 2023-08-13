@@ -354,6 +354,9 @@ After executing the command above, we will see the output displayed in the scree
 ![Screenshot from 2023-08-13 19-25-19](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/c34fb6d4-9cdb-41dc-8f10-d1c35635370a)
 ![Screenshot from 2023-08-13 19-25-48](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/751ec771-806e-4220-bb9e-e710de292160)
 
+In the directory /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib, you will find the SkyWater 130nm standard cell library file named "sky130_fd_sc_hd__tt_025C_1v80.lib," which will be utilized for our lab exercises.
+
+(A standard cell library is a collection of predefined and characterized digital logic cells used in integrated circuit (IC) design. These cells are the fundamental building blocks of digital designs, such as CPUs, memory units, and other complex digital systems. Standard cell libraries play a crucial role in enabling efficient and optimized chip design.)
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
