@@ -326,6 +326,23 @@ A testbench is a critical component in digital design and verification. It's use
 
 ### Labs using Iverilog and GTKwave
 
+Steps to setup lab for iverilog and gtkwave:
+
+- Create a directory named "VLSI" or choose another name if you prefer.
+```bash
+mk dir VLSI
+```
+- Navigate to the "VLSI" directory.
+```bash
+cd VLSI
+```
+
+- To create a copy of a remote Git repository onto your local machine, run the following command in the command prompt (CMD):
+```bash
+git clone https://github.com/kunalg123/vsdflow.git
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+```
+
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
 - https://github.com/steveicarus/iverilog
