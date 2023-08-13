@@ -45,7 +45,7 @@ $ sudo apt-get install iverilog
 
 ```
 Screenshot after installation-
-![iverilog](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/dd7e5d71-c77c-4709-a943-dcd79d88957a)
+![Screenshot from 2023-08-13 17-59-59](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/8c368b03-67e9-44f3-89b8-caba407cac15)
 
 
 ## Yosys
