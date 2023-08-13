@@ -1,4 +1,4 @@
-# Physical Design Using ASIC
+![image](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/9dd39e60-0466-48e4-9650-c44fac7aa928)![image](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/3653cb62-44c0-4938-82e7-a0cd516cd620)# Physical Design Using ASIC
 
 ## Content
 - [Day 0: Software Installation](#day-0-software-installation)
@@ -330,18 +330,26 @@ Steps to setup lab for iverilog and gtkwave:
 
 - Create a directory named "VLSI" or choose another name if you prefer.
 ```bash
-mk dir VLSI
+$ mk dir VLSI
 ```
 - Navigate to the "VLSI" directory.
 ```bash
-cd VLSI
+$ cd VLSI
 ```
 
 - To create a copy of a remote Git repository onto your local machine, run the following command in the command prompt (CMD):
 ```bash
-git clone https://github.com/kunalg123/vsdflow.git
-git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+$ git clone https://github.com/kunalg123/vsdflow.git
+$ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 ```
+Now we can check the 'lab folder' to see which files are present in it using the following command
+```bash
+$ cd VLSI/sky130RTLDesignAndSynthesisWorkshop
+$ ls -R 
+```
+Using the 'ls -R' command, we can list all files and directories, including those within subdirectories.
+
+After executing the command above, you will see the output displayed in the screenshot below:
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
