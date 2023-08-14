@@ -394,7 +394,8 @@ After executing above commands, you can see the final waveform, similar to the p
 ![Screenshot from 2023-08-14 11-24-00](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/68b403d1-7dc7-4fd4-8fde-8bad3d83fe50)
 
 Now we will analyze the waveform in GTKwave.
-- s
+![Screenshot from 2023-08-14 13-00-36](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/91bc2a13-0903-4c92-925d-2e2b36c20a97)
+
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
 - https://github.com/steveicarus/iverilog
