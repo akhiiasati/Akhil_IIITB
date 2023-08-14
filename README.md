@@ -637,6 +637,8 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
   - [Hierarchical Synthesis](#hierarchical-synthesis)
   - [Flat Synthesis](#flat-synthesis)
   - [Submodule Synthesis](#submodule-synthesis)
+- [Part C: Various Flop Coding Styles and optimization](#part-c-various-flop-coding-styles-and-optimization)
+  - [Flip Flops](#flip-flops)
 
 ### Part A: Introduction to timing .libs
 In this section, we will take a detailed look at the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, which is being utilized in our lab.
@@ -809,6 +811,12 @@ $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $ show
 ```
 ![Screenshot from 2023-08-14 23-51-51](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/d487c38e-4ab0-4d09-86ed-86a733c85adb)
+
+## Part C: Various Flop Coding Styles and optimization
+### Flip Flops
+
+A flip-flop is a basic digital circuit element that stores a binary value (0 or 1). It's crucial for memory, sequential operations, and synchronization in electronics. When triggered by a clock signal, a flip-flop captures and holds its input, offering memory and control for various tasks like data storage, state machines, and timing control. Different types of flip-flops cater to specific needs, making them vital building blocks in digital systems.
+
 
 ## Day 3: Combinational and sequential optmizations
 
