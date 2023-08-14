@@ -289,6 +289,8 @@ Screenshot after installation-
   -  [Labs using Iverilog and GTKwave](#labs-using-iverilog-and-gtkwave)
   -  [Iverilog and GTKwave Lab Demonstration](#Iverilog-and-gtkwave-lab-demonstration)
 
+- [Introduction to Yosys](#introduction-to-yosys)
+  
 ## Part A: Introduction to open-source simulator iverilog
 
 In Icarus Verilog, a simulator is a core component responsible for emulating the behavior of digital designs described in Verilog code. It allows users to virtually test and validate their designs before proceeding to physical implementation. The simulator compiles Verilog source code, simulates the logical operations of the design, and generates results that aid in functional verification.
@@ -509,6 +511,37 @@ These always blocks simulate the toggling behavior of the input signals. They ch
     endmodule
 ```
     This line ends the definition of the testbench module.
+
+## Introduction Yosys
+### Synthesizer:
+A synthesizer, in the context of digital design and electronics, refers to a software tool or toolchain that automates the process of transforming a high-level hardware description into a lower-level representation suitable for implementation on specific hardware platforms. Synthesizers are an integral part of the electronic design automation (EDA) ecosystem, enabling designers to efficiently create and optimize digital circuits.
+
+![Screenshot (10)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/5495762b-a519-4aa3-948b-47756f8f471b)
+
+![Screenshot (11)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/d234624c-01da-47d1-a575-b4a82db311f4)
+### Liberty(.lib):
+
+A Liberty (.lib) file is a standard format used in electronic design automation (EDA) for representing the electrical and timing characteristics of library cells, which are the fundamental building blocks of digital integrated circuits. The Liberty format is widely used to define library cells' timing, power, and noise attributes, allowing designers to accurately model and analyze the behavior of these cells during various stages of the design process.
+
+In a Liberty file, you can typically find information such as:
+
+- Cell Definitions
+- Timing Models
+- Power Models
+- Operational Constraints
+- Variation and Process Corners
+- Noise and Signal Integrity
+- Library Hierarchies
+
+Liberty files play a crucial role in the design and optimization of digital circuits. They enable designers to make informed decisions about cell selection, logic synthesis, timing analysis, and power optimization. These files are used by various EDA tools to ensure accurate modeling and simulation of digital circuits, ultimately contributing to the successful creation of efficient and functional integrated circuits.
+
+### Netlist file
+
+A netlist file is a fundamental component in electronic design automation (EDA) and digital circuit design. It represents a structural description of a digital circuit, specifying the interconnections and logic components that make up the circuit. Netlist files play a crucial role in various stages of the design process, including logic synthesis, simulation, and physical design.
+
+Netlist files are crucial for simulation, where they serve as inputs to simulators to validate the circuit's behavior under different scenarios. They are also used for physical design, including place-and-route, where the circuit is mapped to physical locations on a chip and interconnections are established.
+
+Netlist formats can vary depending on the EDA tool and the design's target technology. Common formats include Verilog netlist (.v), VHDL netlist (.vhd), and Electronic Design Interchange Format (EDIF) files (.edn). These files facilitate communication between different design tools and enable a seamless flow from high-level design to physical implementation.
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
