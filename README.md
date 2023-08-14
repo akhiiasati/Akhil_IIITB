@@ -416,15 +416,15 @@ endmodule
 ```
 Let's break down the code step by step:
 
-    input i0, i1, sel: These are input ports of the module. i0 and i1 are the two input signals that you want to multiplex (select from), and sel is the control signal that determines which input to choose.
+- input i0, i1, sel: These are input ports of the module. i0 and i1 are the two input signals that you want to multiplex (select from), and sel is the control signal that determines which input to choose.
 
-    output reg y: This is an output port of the module. y is the output signal of the multiplexer that will carry the selected input.
+- output reg y: This is an output port of the module. y is the output signal of the multiplexer that will carry the selected input.
 
-    always @ (*): This is a combinational logic block that is sensitive to any change in its input signals (* is a wildcard indicating sensitivity to all inputs). This block will execute whenever there is a change in any of the input signals.
+- always @ (*): This is a combinational logic block that is sensitive to any change in its input signals (* is a wildcard indicating sensitivity to all inputs). This block will execute whenever there is a change in any of the input signals.
 
-    The if(sel) statement checks the value of the sel signal:
-        If sel is high (1), y is assigned the value of i1.
-        If sel is low (0), y is assigned the value of i0.
+- The if(sel) statement checks the value of the sel signal:
+        - If sel is high (1), y is assigned the value of i1.
+        - If sel is low (0), y is assigned the value of i0.
 
 Let's understand the testbench "tb_good_mux"
 ```bash
