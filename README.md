@@ -601,6 +601,8 @@ Perform synthesis on the design, specifying good_mux as the top module for synth
 ```bash
 synth -top good_mux
 ```
+![Screenshot from 2023-08-14 16-31-38](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/534779ba-e6e8-40fa-8b1a-9a9b7469316c)
+
 Step 6: Perform Technology Mapping using ABC
 
 Perform technology mapping using the ABC (A System for Sequential Logic Synthesis and Verification) tool, and provide the previously read Liberty library for cell mapping.
