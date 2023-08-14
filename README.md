@@ -755,14 +755,17 @@ Let systhesize the above circuit in Yosys using below commad:
 $ cd /home/akhilasati/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
 $ yosys
 $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
-$ read_verilog 
 $ read_verilog multiple_modules.v 
 $ synth -top multiple_modules
 $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
 $ show multiple_modules
 $ write_verilog multiple_modules_hier.v
+$ gvim multiple_modules_hier.v
 ```
+![Screenshot from 2023-08-14 22-50-41](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/cd87d6e0-aaf3-455d-be44-2b6dae82ac07)
 
+We were expecting to observe AND and OR gates, but instead, we have modules (sub_module1 and sub_module2), illustrating a hierarchical design.
+![Screenshot from 2023-08-14 22-55-17](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/ca53ffda-3aff-494b-8876-7a46963fa783)
 Flat Synthesis:
 In contrast, flat synthesis treats the entire design as a single, monolithic unit. All components and sub-modules are synthesized together in a single step. This approach may be suitable for simpler designs or when a top-down design flow is not necessary. Flat synthesis can potentially offer better optimization opportunities across the entire design but may become unwieldy as the design complexity increases. Debugging and design changes can be more challenging due to the lack of modular organization.
 
