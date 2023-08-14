@@ -569,7 +569,7 @@ Step 1: Navigate to the Verilog Files Directory
 Open a terminal and navigate to the directory containing the Verilog files for the project.
 
 ```bash
-cd VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+cd /home/akhilasati/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
 ```
 Step 2: Launch Yosys
 
