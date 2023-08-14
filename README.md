@@ -666,11 +666,11 @@ Note: In case you find the red color irritating, then type the below command in 
 
 When exploring the library, three letters, "P V T," become significant. In this context, "P" represents Process, "V" signifies Voltage, and "T" denotes Temperature. These three factors are crucial for ensuring the proper functioning of a design. PVT represents the three key parameters that significantly impact the behavior and performance of integrated circuits.
 
-- Process (P): Refers to the manufacturing process used to fabricate the semiconductor chips. The process influences the physical characteristics, dimensions, and electrical properties of transistors and interconnects on the chip.
+- Process (P): The manufacturing process is the foundation upon which the ASIC is built. Variations in the fabrication process can lead to differences in transistor characteristics, gate lengths, oxide thickness, and other physical properties. These variations impact parameters such as transistor speed, leakage current, and power consumption. Designers must account for process variations to ensure consistent and reliable circuit performance.
 
-- Voltage (V): Indicates the supply voltage provided to the integrated circuit. Voltage affects power consumption, performance, and noise margin of the circuit.
+- Voltage (V): The supply voltage directly affects the functionality and power consumption of an ASIC. Operating at higher voltages can result in faster transistor switching speeds but also leads to increased power consumption and heat generation. Conversely, lowering the supply voltage conserves power but may decrease circuit speed. Proper voltage selection strikes a balance between power efficiency and performance.
 
-- Temperature (T): Signifies the operating temperature of the integrated circuit. Temperature variations can impact transistor characteristics, propagation delays, and overall circuit performance.
+- Temperature (T): The operating temperature of an ASIC significantly influences its electrical characteristics. Temperature variations cause changes in transistor mobility, threshold voltage, and other parameters. These changes impact signal propagation delays, noise margins, and overall circuit performance. Ensuring the circuit operates reliably across different temperature ranges is vital for applications in varying environments.
 
 ## Day 3: Combinational and sequential optmizations
 
