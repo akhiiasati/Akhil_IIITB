@@ -364,6 +364,30 @@ In the directory /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files, y
 
 ### Iverilog and GTKwave Lab Demonstration:
 
+Open your terminal and navigate to the directory containing the Verilog files and their corresponding testbench files:
+```bash
+$ cd path/to/your/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+```
+Test the Verilog file and its corresponding testbench using the iverilog command. Replace good_mux.v and tb_good_mux.v with your actual Verilog file and testbench filenames.
+```bash
+$ iverilog good_mux.v tb_good_mux.v
+```
+The provided command compiles the Verilog design file good_mux.v along with its associated testbench tb_good_mux.v using the Icarus Verilog compiler. This compilation process produces a simulation executable, often named a.out, which captures the interplay between the design and its testbench. By running ./a.out, this executable is executed, simulating the design's behavior according to the test scenarios defined in the testbench. This command holds significant importance in ensuring the accuracy and operational effectiveness of digital logic designs through simulation methodologies.
+
+To execute the simulation, use the command:
+```bash
+$ ./a.out
+```
+When the command ./a.out is executed, it triggers the compiled simulation of your Verilog design and its corresponding testbench. Our testbench is set up to generate VCD files, this command also creates a VCD file.
+
+The VCD (Value Change Dump) file is a crucial output generated during Verilog simulation. It captures the dynamic changes in signal values over the course of the simulation, representing how the digital circuit behaves over time. VCD files are commonly used for waveform visualization and analysis using tools like GTKWave. 
+
+To visualize the simulation results, you can execute the following command:
+
+```bash
+$ gtkwave tb_good_mux.vcd
+```
+The command gtkwave tb_good_mux.vcd is used to open the GTKWave waveform viewer to visualize the contents of a VCD (Value Change Dump) file named tb_good_mux.vcd.This command allows you to observe how signals in your design change over time, helping you to verify the correctness of your digital logic design.
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
