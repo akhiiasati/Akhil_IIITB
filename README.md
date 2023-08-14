@@ -287,6 +287,7 @@ Screenshot after installation-
 - [Part A: Introduction to open-source simulator iverilog](#part-A-introduction-to-open-source-simulator-iverilog)
   -  [Introduction to Iverilog Design Testbench](#introduction-to-iverilog-design-testbench)
   -  [Labs using Iverilog and GTKwave](#labs-using-iverilog-and-gtkwave)
+  -  [Iverilog and GTKwave Lab Demonstration](#Iverilog-and-gtkwave-lab-demonstration)
 
 ## Part A: Introduction to open-source simulator iverilog
 
