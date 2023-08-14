@@ -289,7 +289,7 @@ Screenshot after installation-
   -  [Labs using Iverilog and GTKwave](#labs-using-iverilog-and-gtkwave)
   -  [Iverilog and GTKwave Lab Demonstration](#Iverilog-and-gtkwave-lab-demonstration)
 
-- [Introduction to Yosys](#introduction-to-yosys)
+- [Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-synthesis)
   
 ## Part A: Introduction to open-source simulator iverilog
 
@@ -512,7 +512,7 @@ These always blocks simulate the toggling behavior of the input signals. They ch
 ```
     This line ends the definition of the testbench module.
 
-## Introduction Yosys
+## Introduction to Yosys and Logic Synthesis
 ### Synthesizer:
 A synthesizer, in the context of digital design and electronics, refers to a software tool or toolchain that automates the process of transforming a high-level hardware description into a lower-level representation suitable for implementation on specific hardware platforms. Synthesizers are an integral part of the electronic design automation (EDA) ecosystem, enabling designers to efficiently create and optimize digital circuits.
 
