@@ -674,12 +674,32 @@ When exploring the library, three letters, "P V T," become significant. In this 
 
 Let's now take a detailed walkthrough of the sky130_fd_sc_hd__tt_025C_1v80.lib library.
 ```bash
-technology and all
+    technology("cmos");
+    delay_model : "table_lookup";
+    bus_naming_style : "%s[%d]";
+    time_unit : "1ns";
+    voltage_unit : "1V";
+    leakage_power_unit : "1nW";
+    current_unit : "1mA";
+    pulling_resistance_unit : "1kohm";
 ```
 In the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, the aforementioned line provides details about several important aspects. These include the technology implemented, the utilized delay model involving table lookups, the style of bus naming, and specifications pertaining to time, voltage, current, power, and units. It's notable that the CMOS technology is adopted within the "sky130_fd_sc_hd__tt_025C_1v80.lib" library.
 
-cells ka screenshot
+![Screenshot from 2023-08-14 21-14-27](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/2f60ab7a-c522-49fb-be20-f468d61cc727)
+We have lot of cells in "sky130_fd_sc_hd__tt_025C_1v80.lib", .lib file is bucket of all the standard library which we use. Keyword cell marked the beginning of cell. So there are lots of different types of cells present in .lib.for e.g. "sky130_fd_sc_hd__a2111o_1", different flavours of different cells and contains different flavours of same cells are present.
 
+.lib conatins the different features of cell.Lets understand with an example. lets take this cell for understanding purpose:- sky130_fd_sc_hd__a2111o_1
+- a21110 means:
+  - it is and-or gate.
+  - it is a 2 input and gate and remaining are or gate.
+Inside the cell you can see its features are defined for different sets of input. For example you can see in below picture:
+
+![Screenshot from 2023-08-14 21-40-22](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/5659fc17-be15-40e8-bd80-9b817acad95f)
+![Screenshot from 2023-08-14 21-40-30](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a05751c7-50a0-4a93-81bb-ee3e76ec8be4)
+![Screenshot from 2023-08-14 21-40-40](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/d515a615-1665-488f-94a8-5126470be9b0)
+
+we can also understand the functionality of cell by its equivalent verilog models
+![Screenshot from 2023-08-14 21-40-02](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/ce06ccfb-bc4c-4722-badb-aa5365d1c4ae)
 
 ## Day 3: Combinational and sequential optmizations
 
