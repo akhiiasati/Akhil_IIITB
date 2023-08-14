@@ -291,7 +291,7 @@ Screenshot after installation-
 
 - [Part B: Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-synthesis)
   - [Synthesizer](#synthesizer)
-  - [Why do we need of Setup and Hold Time?](#Why-do-we-need-of-setup-and-hold-time?)
+  - [Need of Setup and Hold Time](#need-of-setup-and-hold-time)
   - [Demonstration of Yosys](#demonstration-of-yosys)
 ## Part A: Introduction to open-source simulator iverilog
 
@@ -551,7 +551,7 @@ Netlist formats can vary depending on the EDA tool and the design's target techn
 
 ![Screenshot (12)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a5d83ad7-5c67-4374-b9f0-2e8a0db1895f)
 
-### Why do we need of Setup and Hold Time?
+### Need of Setup and Hold Time
 
 ![Screenshot (18)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/c4766f8e-64c2-41df-bc5d-4e8f2cefb204)
 ![Screenshot (13)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/761c83be-5817-4e43-a110-e82b534e1048)
