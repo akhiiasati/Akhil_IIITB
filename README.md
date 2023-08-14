@@ -786,6 +786,10 @@ $ show
 $ write_verilog multiple_modules_flat.v
 $ gvim multiple_modules_hier.v
 ```
+Note: The flatten command is used to flatten the design hierarchy, which converts the multi-level hierarchical design into a single-level flat design. This can be useful for various purposes, such as optimization, analysis, or generating netlists for further processing.
+
+![Screenshot from 2023-08-14 23-23-39](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/05d43033-c514-43c0-8d9e-6503ffc0d6a6)
+![Screenshot from 2023-08-14 23-27-03](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/b3c3c882-a246-4353-98a6-dd565fac3c61)
 
 ## Day 3: Combinational and sequential optmizations
 
