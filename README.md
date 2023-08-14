@@ -634,6 +634,9 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
 
 - [Part A: Introduction to timing .libs](#part-a-introduction-to-timing-libs)
 - [Part B: Hierarchical vs Flat Synthesis](#part-b-hierarchical-vs-flat-synthesis)
+  - [Hierarchical Synthesis](#hierarchical-synthesis)
+  - [Flat Synthesis](#flat-synthesis)
+  - [Submodule Synthesis](#submodule-synthesis)
 
 ### Part A: Introduction to timing .libs
 In this section, we will take a detailed look at the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, which is being utilized in our lab.
@@ -706,7 +709,7 @@ we can also understand the functionality of cell by its equivalent verilog model
 
 ### Part B: Hierarchical vs Flat Synthesis
 
-Hierarchical Synthesis:
+### Hierarchical Synthesis:
 In hierarchical synthesis, the design is organized into hierarchical modules or blocks, with each module representing a specific functional unit or component. These modules can be designed and optimized independently. Hierarchical synthesis enables a structured and organized design flow, making it easier to manage complex designs and promote reusability. It encourages modular design practices, fosters team collaboration, and allows for efficient design changes within specific modules without affecting the entire design.
 
 Lets walk through the multiple module file present in below directory:
@@ -769,7 +772,7 @@ Yosys does not explicitly represent individual AND and OR gates during synthesis
 
 ![IMG20230814230952](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/410b7e7a-1192-4e22-87f0-985a83d736cf)
 
-Flat Synthesis:
+### Flat Synthesis:
 In contrast, flat synthesis treats the entire design as a single, monolithic unit. All components and sub-modules are synthesized together in a single step. This approach may be suitable for simpler designs or when a top-down design flow is not necessary. Flat synthesis can potentially offer better optimization opportunities across the entire design but may become unwieldy as the design complexity increases. Debugging and design changes can be more challenging due to the lack of modular organization.
 
 Let systhesize the multiple_module in Yosys using below commad:
@@ -789,7 +792,23 @@ $ gvim multiple_modules_hier.v
 Note: The flatten command is used to flatten the design hierarchy, which converts the multi-level hierarchical design into a single-level flat design. This can be useful for various purposes, such as optimization, analysis, or generating netlists for further processing.
 
 ![Screenshot from 2023-08-14 23-23-39](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/05d43033-c514-43c0-8d9e-6503ffc0d6a6)
+![Screenshot from 2023-08-14 23-23-30](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/cad06909-1372-41a7-b0fa-3bbfa4675df9)
 ![Screenshot from 2023-08-14 23-27-03](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/b3c3c882-a246-4353-98a6-dd565fac3c61)
+
+### Submodule Synthesis
+Submodule synthesis is a key process in digital design where individual modules or submodules within a larger design are synthesized independently to generate their gate-level representations. This involves translating high-level hardware descriptions into gate-level netlists using logic synthesis tools, optimizing for area, timing, and power. The synthesized submodules are then integrated back into the overall design hierarchy, ensuring proper interconnections. This modular approach allows for efficient design reuse and hierarchical organization, contributing to easier debugging and streamlined design workflows. The synthesized submodules, along with further optimization and physical design steps, ultimately contribute to the creation of a functional and efficient digital circuit on hardware platforms like FPGAs or ASICs.
+
+Run the below command to synthesize the submodules:
+```bash
+$ cd /home/akhilasati/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+$ yosys
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+$ read_verilog multiple_modules.v 
+$ synth -top sub_module1
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+$ show
+```
+![Screenshot from 2023-08-14 23-51-51](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/d487c38e-4ab0-4d09-86ed-86a733c85adb)
 
 ## Day 3: Combinational and sequential optmizations
 
