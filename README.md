@@ -290,7 +290,8 @@ Screenshot after installation-
   -  [Iverilog and GTKwave Lab Demonstration](#Iverilog-and-gtkwave-lab-demonstration)
 
 - [Introduction to Yosys and Logic Synthesis](#introduction-to-yosys-and-logic-synthesis)
-  
+  - [Synthesizer](#synthesizer)
+  - [Demonstration of Yosys](#demonstration-of-yosys)
 ## Part A: Introduction to open-source simulator iverilog
 
 In Icarus Verilog, a simulator is a core component responsible for emulating the behavior of digital designs described in Verilog code. It allows users to virtually test and validate their designs before proceeding to physical implementation. The simulator compiles Verilog source code, simulates the logical operations of the design, and generates results that aid in functional verification.
@@ -542,6 +543,15 @@ A netlist file is a fundamental component in electronic design automation (EDA) 
 Netlist files are crucial for simulation, where they serve as inputs to simulators to validate the circuit's behavior under different scenarios. They are also used for physical design, including place-and-route, where the circuit is mapped to physical locations on a chip and interconnections are established.
 
 Netlist formats can vary depending on the EDA tool and the design's target technology. Common formats include Verilog netlist (.v), VHDL netlist (.vhd), and Electronic Design Interchange Format (EDIF) files (.edn). These files facilitate communication between different design tools and enable a seamless flow from high-level design to physical implementation.
+
+### Verify the Synthesis:
+- Output of the syntheis should be same as output obtained during RTL simulation.
+- Netlist is the true representation of our design, i.e., design was written as a behavioral Verilog code, and the netlist is Verilog code in terms of standard cells. However, between the design and synthesized netlist, the primary inputs and outputs are not changed, which means we can use the same testbench that we use in RTL simulation.
+
+ ![Screenshot 2023-08-09 092702](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/cc7665e0-9ed1-413b-b6da-75731ae9bbd7)
+ 
+
+### Demonstration of Yosys
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
