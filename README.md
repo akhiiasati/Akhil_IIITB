@@ -763,9 +763,12 @@ $ write_verilog multiple_modules_hier.v
 $ gvim multiple_modules_hier.v
 ```
 ![Screenshot from 2023-08-14 22-50-41](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/cd87d6e0-aaf3-455d-be44-2b6dae82ac07)
-
-We were expecting to observe AND and OR gates, but instead, we have modules (sub_module1 and sub_module2), illustrating a hierarchical design.
 ![Screenshot from 2023-08-14 22-55-17](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/ca53ffda-3aff-494b-8876-7a46963fa783)
+
+Yosys does not explicitly represent individual AND and OR gates during synthesis; instead, it displays the submodule names involved. The resulting netlist also segregates the AND and OR logic into distinct submodules. At times, Yosys may optimize the design by transforming an OR gate into an arrangement of NAND gates. This optimization aligns with the CMOS structure of the OR gate, which features two stacked pMOS transistors. Due to the reduced mobility of holes compared to electrons, inherent in the majority-carrier nature of pMOS, the gate experiences increased delay, making it less favorable. In contrast, the implementation of the NAND gate involves stacking only nMOS transistors.
+
+![IMG20230814230952](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/410b7e7a-1192-4e22-87f0-985a83d736cf)
+
 Flat Synthesis:
 In contrast, flat synthesis treats the entire design as a single, monolithic unit. All components and sub-modules are synthesized together in a single step. This approach may be suitable for simpler designs or when a top-down design flow is not necessary. Flat synthesis can potentially offer better optimization opportunities across the entire design but may become unwieldy as the design complexity increases. Debugging and design changes can be more challenging due to the lack of modular organization.
 
