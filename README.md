@@ -510,7 +510,6 @@ These always blocks simulate the toggling behavior of the input signals. They ch
 ```
     This line ends the definition of the testbench module.
 
-You can save this code in a file named "tb_good_mux.v" and include it along with the original good_mux module in your GitHub repository or documentation.
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
 - https://github.com/steveicarus/iverilog
