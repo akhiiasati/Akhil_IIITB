@@ -673,7 +673,12 @@ When exploring the library, three letters, "P V T," become significant. In this 
 - Temperature (T): The operating temperature of an ASIC significantly influences its electrical characteristics. Temperature variations cause changes in transistor mobility, threshold voltage, and other parameters. These changes impact signal propagation delays, noise margins, and overall circuit performance. Ensuring the circuit operates reliably across different temperature ranges is vital for applications in varying environments.
 
 Let's now take a detailed walkthrough of the sky130_fd_sc_hd__tt_025C_1v80.lib library.
+```bash
+technology and all
+```
+In the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, the aforementioned line provides details about several important aspects. These include the technology implemented, the utilized delay model involving table lookups, the style of bus naming, and specifications pertaining to time, voltage, current, power, and units. It's notable that the CMOS technology is adopted within the "sky130_fd_sc_hd__tt_025C_1v80.lib" library.
 
+cells ka screenshot
 
 
 ## Day 3: Combinational and sequential optmizations
