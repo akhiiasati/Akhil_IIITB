@@ -426,6 +426,91 @@ Let's break down the code step by step:
         If sel is high (1), y is assigned the value of i1.
         If sel is low (0), y is assigned the value of i0.
 
+Let's understand the testbench "tb_good_mux"
+```bash
+`timescale 1ns / 1ps
+
+module tb_good_mux;
+    // Inputs
+    reg i0, i1, sel;
+    // Outputs
+    wire y;
+
+    // Instantiate the Unit Under Test (UUT)
+    good_mux uut (
+        .sel(sel),
+        .i0(i0),
+        .i1(i1),
+        .y(y)
+    );
+
+    initial begin
+        $dumpfile("tb_good_mux.vcd");
+        $dumpvars(0, tb_good_mux);
+        // Initialize Inputs
+        sel = 0;
+        i0 = 0;
+        i1 = 0;
+        #300 $finish;
+    end
+
+    // Toggle sel, i0, and i1 signals at different time intervals
+    always #75 sel = ~sel;
+    always #10 i0 = ~i0;
+    always #55 i1 = ~i1;
+
+endmodule
+```
+Let's break down the code step by step:
+```bash
+`timescale 1ns / 1ps
+```
+This line sets the simulation timescale to 1 nanosecond per simulation time unit and 1 picosecond per simulation time precision. It defines the units used for time delays and calculations in the simulation.
+```bash
+module tb_good_mux;
+```
+This line starts the definition of the testbench module named tb_good_mux
+```bash
+// Inputs
+reg i0, i1, sel;
+// Outputs
+wire y;
+```
+These lines define the input and output signals for the testbench. i0, i1, and sel are the input signals, and y is the output signal of the multiplexer.
+```bash
+// Instantiate the Unit Under Test (UUT)
+good_mux uut (
+    .sel(sel),
+    .i0(i0),
+    .i1(i1),
+    .y(y)
+);
+```
+This code instantiates the good_mux module (the unit under test) with the specified connections. It connects the testbench signals to the corresponding module ports.
+```bash
+initial begin
+    $dumpfile("tb_good_mux.vcd");
+    $dumpvars(0, tb_good_mux);
+    // Initialize Inputs
+    sel = 0;
+    i0 = 0;
+    i1 = 0;
+    #300 $finish;
+end
+```
+This initial block sets up the simulation environment. It specifies that the simulation output should be written to a VCD (Value Change Dump) file named "tb_good_mux.vcd". It initializes the input signals sel, i0, and i1 to specific values. After a simulation time of 300 time units, the simulation is finished using the $finish system task.
+```bash
+always #75 sel = ~sel;
+always #10 i0 = ~i0;
+always #55 i1 = ~i1;
+```
+These always blocks simulate the toggling behavior of the input signals. They change the values of sel, i0, and i1 at different time intervals to observe how the multiplexer responds.
+```bash
+    endmodule
+```
+    This line ends the definition of the testbench module.
+
+You can save this code in a file named "tb_good_mux.v" and include it along with the original good_mux module in your GitHub repository or documentation.
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
 - https://github.com/steveicarus/iverilog
