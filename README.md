@@ -649,9 +649,19 @@ The sky130_fd_sc_hd__tt_025C_1v80.lib library is a crucial part of the SKY130 pr
 
 Now, let's explore what's inside the "sky130_fd_sc_hd__tt_025C_1v80.lib" library. To see its contents, use the following command:
 ```bash
-
+$ cd VLSI/sky130RTLDesignAndSynthesisWorkshop/lib
+$ gvim sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
+After executing the above command, you will to see the following output:
 
+![Screenshot from 2023-08-14 18-21-23](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/fe1be081-c6c5-4928-a34d-59db0baa520f)
+Note: In case you find the red color irritating, then type the below command in Vim:
+```bash
+:syn off
+```
+![Screenshot from 2023-08-14 18-30-21](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/6aadac77-10e5-42a4-8680-5100ca06d99b)
+
+#### Note: Do not modify "sky130_fd_sc_hd__tt_025C_1v80.lib"
 ## Day 3: Combinational and sequential optmizations
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
