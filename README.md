@@ -548,7 +548,7 @@ Netlist formats can vary depending on the EDA tool and the design's target techn
 - Output of the syntheis should be same as output obtained during RTL simulation.
 - Netlist is the true representation of our design, i.e., design was written as a behavioral Verilog code, and the netlist is Verilog code in terms of standard cells. However, between the design and synthesized netlist, the primary inputs and outputs are not changed, which means we can use the same testbench that we use in RTL simulation.
 
- ![Screenshot (12)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/806f3323-e97e-4e48-bc28-af236af87aaf
+![Screenshot (12)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a5d83ad7-5c67-4374-b9f0-2e8a0db1895f)
  
 
 ### Demonstration of Yosys
