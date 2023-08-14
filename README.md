@@ -633,7 +633,7 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
 ## Day 2: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 
 - [Part A: Introduction to timing .libs](#part-a-introduction-to-timing-libs)
-- 
+- [Part B: Hierarchical vs Flat Synthesis](#part-b-hierarchical-vs-flat-synthesis)
 
 ### Part A: Introduction to timing .libs
 In this section, we will take a detailed look at the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, which is being utilized in our lab.
@@ -703,6 +703,21 @@ Inside the cell you can see its features are defined for different sets of input
 
 we can also understand the functionality of cell by its equivalent verilog models
 ![Screenshot from 2023-08-14 21-40-02](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/ce06ccfb-bc4c-4722-badb-aa5365d1c4ae)
+
+### Part B: Hierarchical vs Flat Synthesis
+
+Hierarchical Synthesis:
+In hierarchical synthesis, the design is organized into hierarchical modules or blocks, with each module representing a specific functional unit or component. These modules can be designed and optimized independently. Hierarchical synthesis enables a structured and organized design flow, making it easier to manage complex designs and promote reusability. It encourages modular design practices, fosters team collaboration, and allows for efficient design changes within specific modules without affecting the entire design.
+
+Lets walk through the multiple module file present in below directory:
+```bash
+cd 
+```
+
+Flat Synthesis:
+In contrast, flat synthesis treats the entire design as a single, monolithic unit. All components and sub-modules are synthesized together in a single step. This approach may be suitable for simpler designs or when a top-down design flow is not necessary. Flat synthesis can potentially offer better optimization opportunities across the entire design but may become unwieldy as the design complexity increases. Debugging and design changes can be more challenging due to the lack of modular organization.
+
+
 
 ## Day 3: Combinational and sequential optmizations
 
