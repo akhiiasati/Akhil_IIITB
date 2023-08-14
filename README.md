@@ -697,6 +697,9 @@ Inside the cell you can see its features are defined for different sets of input
 ![Screenshot from 2023-08-14 21-40-22](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/5659fc17-be15-40e8-bd80-9b817acad95f)
 ![Screenshot from 2023-08-14 21-40-30](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a05751c7-50a0-4a93-81bb-ee3e76ec8be4)
 ![Screenshot from 2023-08-14 21-40-40](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/d515a615-1665-488f-94a8-5126470be9b0)
+![Screenshot from 2023-08-14 21-46-24](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/6a24a88a-36ae-4a54-9af0-ca330db08397)
+![Screenshot from 2023-08-14 21-46-35](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a7d2c97c-b0ab-4ae7-8478-0894251aa1c3)
+![Screenshot from 2023-08-14 21-46-42](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/3603a643-c09e-4600-ae77-d2e2b18f6109)
 
 we can also understand the functionality of cell by its equivalent verilog models
 ![Screenshot from 2023-08-14 21-40-02](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/ce06ccfb-bc4c-4722-badb-aa5365d1c4ae)
