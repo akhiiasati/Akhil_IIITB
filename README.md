@@ -662,6 +662,16 @@ Note: In case you find the red color irritating, then type the below command in 
 ![Screenshot from 2023-08-14 18-30-21](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/6aadac77-10e5-42a4-8680-5100ca06d99b)
 
 #### Note: Do not modify "sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+
+When exploring the library, three letters, "P V T," become significant. In this context, "P" represents Process, "V" signifies Voltage, and "T" denotes Temperature. These three factors are crucial for ensuring the proper functioning of a design. PVT represents the three key parameters that significantly impact the behavior and performance of integrated circuits.
+
+- Process (P): Refers to the manufacturing process used to fabricate the semiconductor chips. The process influences the physical characteristics, dimensions, and electrical properties of transistors and interconnects on the chip.
+
+- Voltage (V): Indicates the supply voltage provided to the integrated circuit. Voltage affects power consumption, performance, and noise margin of the circuit.
+
+- Temperature (T): Signifies the operating temperature of the integrated circuit. Temperature variations can impact transistor characteristics, propagation delays, and overall circuit performance.
+
 ## Day 3: Combinational and sequential optmizations
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
