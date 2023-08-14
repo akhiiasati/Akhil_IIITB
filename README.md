@@ -569,7 +569,7 @@ Step 1: Navigate to the Verilog Files Directory
 Open a terminal and navigate to the directory containing the Verilog files for the project.
 
 ```bash
-cd /home//VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+cd /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
 ```
 Step 2: Launch Yosys
 
@@ -580,8 +580,10 @@ yosys
 Step 3: Read Liberty Library
 
 Read the Liberty library file containing standard cell characterization data for the target technology (SkyWater 130nm process). This library will be used for technology mapping during synthesis.
+
+-lib: This flag indicates that a library file is being read.
 ```bash
-read_liberty -lib /home/kanish/ASIC/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+read_liberty -lib /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
 ```
 Step 4: Read Verilog Design
 
@@ -589,9 +591,13 @@ Read the Verilog design file (good_mux.v) that you want to synthesize.
 ```bash
 read_verilog good_mux.v 
 ```
+![Screenshot from 2023-08-14 16-02-56](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/6d138ae7-d2a7-4329-bfd5-55d1835e9d16)
+
 Step 5: Perform Synthesis
 
 Perform synthesis on the design, specifying good_mux as the top module for synthesis.
+- synth: This is the command in Yosys that initiates the synthesis process.
+- top good_mux: This flag specifies the top-level module for synthesis. In this case, the module name is good_mux. The top-level module is the entry point of your design that you want to synthesize. Yosys will analyze and optimize the logic within this module.
 ```bash
 synth -top good_mux
 ```
@@ -600,7 +606,7 @@ Step 6: Perform Technology Mapping using ABC
 Perform technology mapping using the ABC (A System for Sequential Logic Synthesis and Verification) tool, and provide the previously read Liberty library for cell mapping.
 
 ```bash
-abc -liberty /home/kanish/ASIC/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 Step 7: Display Design Hierarchy
 
