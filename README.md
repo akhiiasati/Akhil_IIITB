@@ -636,6 +636,22 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
 - 
 
 ### Part A: Introduction to timing .libs
+In this section, we will take a detailed look at the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, which is being utilized in our lab.
+
+sky130: refers 130nm technology.
+fd: denotes "foundry" or the manufacturing process.
+sc: represents "standard cell" or the type of library.
+hd: refer to "high-density" standard cells.
+tt_025C: stand for "typical temperature 25°C," indicating a temperature condition for characterization.
+1v80: represents a supply voltage of 1.80 volts.
+
+The sky130_fd_sc_hd__tt_025C_1v80.lib library is a crucial part of the SKY130 process technology. It contains a wide range of carefully created standard cell designs that are perfect for making complex digital circuits that work well even in tough situations. This library includes important information about how the cells behave logically, how fast they work, and how much power they use. This helps us make digital designs that are efficient and dependable.
+
+Now, let's explore what's inside the "sky130_fd_sc_hd__tt_025C_1v80.lib" library. To see its contents, use the following command:
+```bash
+
+```
+
 ## Day 3: Combinational and sequential optmizations
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
