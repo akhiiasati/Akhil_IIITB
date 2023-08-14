@@ -4,6 +4,7 @@
 - [Day 0: Software Installation](#day-0-software-installation)
 - [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
 - [References](#references)
+- [Day 2: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
 
 ## Day 0: Software Installation
 
@@ -613,6 +614,9 @@ write_verilog -noattr good_mux_netlist.v
 Step 9: Exit Yosys
 
 Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
+
+## Day 2: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
+
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
