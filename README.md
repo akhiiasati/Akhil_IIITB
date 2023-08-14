@@ -624,11 +624,12 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
 
 ### Screenshots of above steps:
 
-![Screenshot from 2023-08-14 16-47-25](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/edf4aaec-4b25-4466-821a-857c486106ab)
-![Screenshot from 2023-08-14 16-49-57](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/16ad0e7c-ab69-4bc4-a872-2cbd33710ed7)
-![Screenshot from 2023-08-14 16-50-35](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/c4302b92-f6d8-41ee-913d-bf870c28c966)
 ![Screenshot from 2023-08-14 16-50-21](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/397e1c41-5267-4b62-a5f7-b4d9f3ca6500)
+![Screenshot from 2023-08-14 16-47-25](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/edf4aaec-4b25-4466-821a-857c486106ab)
+![Screenshot from 2023-08-14 16-50-35](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/c4302b92-f6d8-41ee-913d-bf870c28c966)
+![Screenshot from 2023-08-14 16-49-57](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/16ad0e7c-ab69-4bc4-a872-2cbd33710ed7)
 ![Screenshot from 2023-08-14 16-49-39](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/155bc47d-6732-4230-9437-55e0299f9277)
+
 ## Day 2: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 
 ## Day 3: Combinational and sequential optmizations
