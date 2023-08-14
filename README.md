@@ -399,6 +399,33 @@ Run the below command in the directory /home/VLSI/sky130RTLDesignAndSynthesisWor
 ```bash
 $ iverilog tb_good_mux.v good_mux.v
 ```
+After executing above command, you can see the verilog code for good_mux and tb_good_mux, similar to the picture below:
+![Screenshot from 2023-08-14 13-24-48](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/490b63d5-7af7-47b7-8646-d662cca9f3de)
+
+Lets first understand verliog code of good_mux
+```bash
+module good_mux (input i0 , input i1 , input sel , output reg y);
+always @ (*)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+Let's break down the code step by step:
+
+    input i0, i1, sel: These are input ports of the module. i0 and i1 are the two input signals that you want to multiplex (select from), and sel is the control signal that determines which input to choose.
+
+    output reg y: This is an output port of the module. y is the output signal of the multiplexer that will carry the selected input.
+
+    always @ (*): This is a combinational logic block that is sensitive to any change in its input signals (* is a wildcard indicating sensitivity to all inputs). This block will execute whenever there is a change in any of the input signals.
+
+    The if(sel) statement checks the value of the sel signal:
+        If sel is high (1), y is assigned the value of i1.
+        If sel is low (0), y is assigned the value of i0.
+
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
 - https://github.com/steveicarus/iverilog
