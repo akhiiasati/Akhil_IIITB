@@ -390,6 +390,8 @@ $ gtkwave tb_good_mux.vcd
 ```
 The command gtkwave tb_good_mux.vcd is used to open the GTKWave waveform viewer to visualize the contents of a VCD (Value Change Dump) file named tb_good_mux.vcd.This command allows you to observe how signals in your design change over time, helping you to verify the correctness of your digital logic design.
 
+After executing above commands, you can see the final waveform, similar to the picture below:
+
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
 - https://github.com/steveicarus/iverilog
