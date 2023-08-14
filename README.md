@@ -624,7 +624,11 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
 
 ### Screenshots of above steps:
 
-
+![1](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/b3ddbd5b-b3a6-4148-89d5-0d0c945ee6a0)
+![2](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/9c8ad87f-112f-4ed8-90ad-fcd8c7f6756c)
+![3](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/c2e7048f-d5fb-4f71-9926-e54be30875d0)
+![4](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/4d8d9610-a1f1-47b0-9d5e-a196ac1cf4df)
+![5](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/507a2827-e0b4-4b9f-b606-1c53871fbbe6)
 
 ## Day 2: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 
