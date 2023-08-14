@@ -583,7 +583,7 @@ Read the Liberty library file containing standard cell characterization data for
 
 -lib: This flag indicates that a library file is being read.
 ```bash
-read_liberty -lib VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+read_liberty -lib /home/akhilasati/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
 ```
 Step 4: Read Verilog Design
 
@@ -608,7 +608,7 @@ Step 6: Perform Technology Mapping using ABC
 Perform technology mapping using the ABC (A System for Sequential Logic Synthesis and Verification) tool, and provide the previously read Liberty library for cell mapping.
 
 ```bash
-abc -liberty /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /home/akhilasati/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 Step 7: Display Design Hierarchy
 
