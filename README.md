@@ -569,7 +569,7 @@ Step 1: Navigate to the Verilog Files Directory
 Open a terminal and navigate to the directory containing the Verilog files for the project.
 
 ```bash
-cd /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+cd VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
 ```
 Step 2: Launch Yosys
 
@@ -583,7 +583,7 @@ Read the Liberty library file containing standard cell characterization data for
 
 -lib: This flag indicates that a library file is being read.
 ```bash
-read_liberty -lib /home/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+read_liberty -lib VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
 ```
 Step 4: Read Verilog Design
 
