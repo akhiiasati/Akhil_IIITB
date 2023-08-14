@@ -632,6 +632,10 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
 
 ## Day 2: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 
+- [Part A: Introduction to timing .libs](#part-a-introduction-to-timing-libs)
+- 
+
+### Part A: Introduction to timing .libs
 ## Day 3: Combinational and sequential optmizations
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
