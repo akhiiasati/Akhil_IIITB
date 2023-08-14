@@ -772,7 +772,20 @@ Yosys does not explicitly represent individual AND and OR gates during synthesis
 Flat Synthesis:
 In contrast, flat synthesis treats the entire design as a single, monolithic unit. All components and sub-modules are synthesized together in a single step. This approach may be suitable for simpler designs or when a top-down design flow is not necessary. Flat synthesis can potentially offer better optimization opportunities across the entire design but may become unwieldy as the design complexity increases. Debugging and design changes can be more challenging due to the lack of modular organization.
 
+Let systhesize the multiple_module in Yosys using below commad:
 
+```bash
+$ cd /home/akhilasati/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+$ yosys
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+$ read_verilog multiple_modules.v 
+$ synth -top multiple_modules
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ flatten
+$ show 
+$ write_verilog multiple_modules_flat.v
+$ gvim multiple_modules_hier.v
+```
 
 ## Day 3: Combinational and sequential optmizations
 
