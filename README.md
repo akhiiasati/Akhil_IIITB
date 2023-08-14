@@ -746,7 +746,22 @@ endmodule
 - The operation of this module can be explained step by step:
   - u1 computes the bitwise AND of inputs a and b and stores the result in net1.
   - u2 takes the value of net1 (which is a & b) and performs a bitwise OR operation with input c. The result is assigned to the output y, which effectively computes the expression y = (a & b) | c.
+                                                
+![WhatsApp Image 2023-08-14 at 22 31 53](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/5b0a6fd5-7ff2-42c4-854d-0b710536278a)
 
+Let systhesize the above circuit in Yosys using below commad:
+
+```bash
+$ cd /home/akhilasati/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+$ yosys
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+$ read_verilog 
+$ read_verilog multiple_modules.v 
+$ synth -top multiple_modules
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+$ show multiple_modules
+$ write_verilog multiple_modules_hier.v
+```
 
 Flat Synthesis:
 In contrast, flat synthesis treats the entire design as a single, monolithic unit. All components and sub-modules are synthesized together in a single step. This approach may be suitable for simpler designs or when a top-down design flow is not necessary. Flat synthesis can potentially offer better optimization opportunities across the entire design but may become unwieldy as the design complexity increases. Debugging and design changes can be more challenging due to the lack of modular organization.
