@@ -740,9 +740,9 @@ endmodule
 - sub_module2: This module takes two input signals a and b and produces one output signal y. It performs a bitwise OR operation between a and b and assigns the result to y.
 - multiple_modules: This is the top-level module that integrates the other two sub-modules (sub_module1 and sub_module2) to create a more complex logic circuit. It takes three input signals a, b, and c, and produces one output signal y.
 - Inside the multiple_modules module:
-  -It declares a wire net1 which is used to connect the output of sub_module1 to the input of sub_module2.
-  It instantiates sub_module1 as u1 and connects its inputs and output: a to .a(a), b to .b(b), and net1 to .y(net1).
-  It instantiates sub_module2 as u2 and connects its inputs and output: net1 to .a(net1), c to .b(c), and y to .y(y).
+  - It declares a wire net1 which is used to connect the output of sub_module1 to the input of sub_module2.
+  - It instantiates sub_module1 as u1 and connects its inputs and output: a to .a(a), b to .b(b), and net1 to .y(net1).
+  - It instantiates sub_module2 as u2 and connects its inputs and output: net1 to .a(net1), c to .b(c), and y to .y(y).
 - The operation of this module can be explained step by step:
   - u1 computes the bitwise AND of inputs a and b and stores the result in net1.
   - u2 takes the value of net1 (which is a & b) and performs a bitwise OR operation with input c. The result is assigned to the output y, which effectively computes the expression y = (a & b) | c.
