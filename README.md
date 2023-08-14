@@ -672,6 +672,10 @@ When exploring the library, three letters, "P V T," become significant. In this 
 
 - Temperature (T): The operating temperature of an ASIC significantly influences its electrical characteristics. Temperature variations cause changes in transistor mobility, threshold voltage, and other parameters. These changes impact signal propagation delays, noise margins, and overall circuit performance. Ensuring the circuit operates reliably across different temperature ranges is vital for applications in varying environments.
 
+Let's now take a detailed walkthrough of the sky130_fd_sc_hd__tt_025C_1v80.lib library.
+
+
+
 ## Day 3: Combinational and sequential optmizations
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
