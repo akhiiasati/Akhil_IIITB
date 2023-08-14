@@ -559,7 +559,60 @@ Netlist formats can vary depending on the EDA tool and the design's target techn
 ![Screenshot (15)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/f0203bfd-d31f-432a-9839-c954ea650110)
 ![Screenshot (17)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/0cfb4ff3-ea88-4bfe-82d6-a994a64db409)
 
-### Demonstration of Yosys
+## Demonstration of Yosys
+Step 1: Navigate to the Verilog Files Directory
+
+Open a terminal and navigate to the directory containing the Verilog files for the project.
+
+```bash
+cd /home//VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+```
+Step 2: Launch Yosys
+
+Launch Yosys, the synthesis tool, by entering the following command:
+```bash
+yosys
+```
+Step 3: Read Liberty Library
+
+Read the Liberty library file containing standard cell characterization data for the target technology (SkyWater 130nm process). This library will be used for technology mapping during synthesis.
+```bash
+read_liberty -lib /home/kanish/ASIC/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+```
+Step 4: Read Verilog Design
+
+Read the Verilog design file (good_mux.v) that you want to synthesize.
+```bash
+read_verilog good_mux.v 
+```
+Step 5: Perform Synthesis
+
+Perform synthesis on the design, specifying good_mux as the top module for synthesis.
+```bash
+synth -top good_mux
+```
+Step 6: Perform Technology Mapping using ABC
+
+Perform technology mapping using the ABC (A System for Sequential Logic Synthesis and Verification) tool, and provide the previously read Liberty library for cell mapping.
+
+```bash
+abc -liberty /home/kanish/ASIC/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+Step 7: Display Design Hierarchy
+
+Display the design hierarchy and cells after synthesis to inspect the results.
+```bash
+show
+```
+Step 8: Write Synthesized Netlist
+
+Write the synthesized netlist to a new Verilog file named good_mux_netlist.v. Exclude attributes from the netlist for simplification.
+```bash
+write_verilog -noattr good_mux_netlist.v
+```
+Step 9: Exit Yosys
+
+Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
