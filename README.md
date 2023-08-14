@@ -711,8 +711,42 @@ In hierarchical synthesis, the design is organized into hierarchical modules or 
 
 Lets walk through the multiple module file present in below directory:
 ```bash
-cd 
+$ cd /VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
 ```
+run the below command to see the content of multiple module file:
+```bash
+$ gvim multiple_modules.v
+```
+Verilog code present is file multiple_modules.v
+```bash
+module sub_module2 (input a, input b, output y);
+	assign y = a | b;
+endmodule
+
+module sub_module1 (input a, input b, output y);
+	assign y = a&b;
+endmodule
+
+
+module multiple_modules (input a, input b, input c , output y);
+	wire net1;
+	sub_module1 u1(.a(a),.b(b),.y(net1));  //net1 = a&b
+	sub_module2 u2(.a(net1),.b(c),.y(y));  //y = net1|c ,ie y = a&b + c;
+endmodule
+```
+ Let's break down each module and its functionality:
+
+- sub_module1: This module takes two input signals a and b and produces one output signal y. It performs a bitwise AND operation between a and b and assigns the result to y.
+- sub_module2: This module takes two input signals a and b and produces one output signal y. It performs a bitwise OR operation between a and b and assigns the result to y.
+- multiple_modules: This is the top-level module that integrates the other two sub-modules (sub_module1 and sub_module2) to create a more complex logic circuit. It takes three input signals a, b, and c, and produces one output signal y.
+- Inside the multiple_modules module:
+  -It declares a wire net1 which is used to connect the output of sub_module1 to the input of sub_module2.
+  It instantiates sub_module1 as u1 and connects its inputs and output: a to .a(a), b to .b(b), and net1 to .y(net1).
+  It instantiates sub_module2 as u2 and connects its inputs and output: net1 to .a(net1), c to .b(c), and y to .y(y).
+- The operation of this module can be explained step by step:
+  - u1 computes the bitwise AND of inputs a and b and stores the result in net1.
+  - u2 takes the value of net1 (which is a & b) and performs a bitwise OR operation with input c. The result is assigned to the output y, which effectively computes the expression y = (a & b) | c.
+
 
 Flat Synthesis:
 In contrast, flat synthesis treats the entire design as a single, monolithic unit. All components and sub-modules are synthesized together in a single step. This approach may be suitable for simpler designs or when a top-down design flow is not necessary. Flat synthesis can potentially offer better optimization opportunities across the entire design but may become unwieldy as the design complexity increases. Debugging and design changes can be more challenging due to the lack of modular organization.
