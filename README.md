@@ -3,8 +3,11 @@
 ## Content
 - [Day 0: Software Installation](#day-0-software-installation)
 - [Day 1: Introduction to Verilog RTL Design and Synthesis](#day-1-introduction-to-verilog-rtl-design-and-synthesis)
-- [References](#references)
 - [Day 2: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles](#day-2-timing-libs-hierarchical-vs-flat-synthesis-and-efficient-flop-coding-styles)
+- [Day 3: Combinational and sequential optmizations](#day-3-combinational-and-sequential-optmizations)
+- [Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch](#day-4-GLS-blocking-vs-non-blocking-and-synthesis-Simulation-mismatch)
+- [Day 5: If, case, for loop and for generate](#Day-5-if-case-for-loop-and-for-generate)
+- [References](#references)
 
 ## Day 0: Software Installation
 
@@ -617,6 +620,11 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
 
 ## Day 2: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 
+## Day 3: Combinational and sequential optmizations
+
+## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+
+## Day 5: If, case, for loop and for generate
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
