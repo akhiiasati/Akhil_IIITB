@@ -591,8 +591,6 @@ Read the Verilog design file (good_mux.v) that you want to synthesize.
 ```bash
 read_verilog good_mux.v 
 ```
-![Screenshot from 2023-08-14 16-02-56](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/6d138ae7-d2a7-4329-bfd5-55d1835e9d16)
-
 Step 5: Perform Synthesis
 
 Perform synthesis on the design, specifying good_mux as the top module for synthesis.
@@ -601,8 +599,6 @@ Perform synthesis on the design, specifying good_mux as the top module for synth
 ```bash
 synth -top good_mux
 ```
-
-
 Step 6: Perform Technology Mapping using ABC
 
 Perform technology mapping using the ABC (A System for Sequential Logic Synthesis and Verification) tool, and provide the previously read Liberty library for cell mapping.
@@ -625,6 +621,8 @@ write_verilog -noattr good_mux_netlist.v
 Step 9: Exit Yosys
 
 Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
+
+### Screenshots of above steps:
 
 ![Screenshot from 2023-08-14 16-47-25](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/edf4aaec-4b25-4466-821a-857c486106ab)
 ![Screenshot from 2023-08-14 16-49-57](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/16ad0e7c-ab69-4bc4-a872-2cbd33710ed7)
