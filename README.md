@@ -1237,6 +1237,7 @@ Synthesis Output:
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
+
 ## Day 5: If, case, for loop and for generate
 
 # References:
