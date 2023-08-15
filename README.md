@@ -840,6 +840,33 @@ To mitigate glitches, a D flip-flop can be connected at the output, ensuring cha
 
 ### Lab flop synthesis simulations
 
+Before start examining different flip-flop circuits, it's important to know the steps for simulating and generating netlists for these designs. These steps ensure accurate analysis and proper understanding of the circuits' behavior.
+
+Simulation and Netlist Generation Steps:
+
+Compile Verilog Files and Run Simulation:
+```bash
+iverilog <rtl_name.v> <tb_name.v>
+./a.out
+```
+View Simulation Results:
+```bash
+gtkwave <dump_file_name.vcd>
+```
+
+Generate Netlist using Yosys:
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog <module_name.v>
+synth -top <top_module_name>
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog -noattr <netlist_name.v>
+```
+These combined steps cover both simulation and netlist generation for flip-flop circuits.
+
 ## Day 3: Combinational and sequential optmizations
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
