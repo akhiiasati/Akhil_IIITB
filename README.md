@@ -842,8 +842,6 @@ To mitigate glitches, a D flip-flop can be connected at the output, ensuring cha
 
 Before start examining different flip-flop circuits, it's important to know the steps for simulating and generating netlists for these designs. These steps ensure accurate analysis and proper understanding of the circuits' behavior.
 
-Simulation and Netlist Generation Steps:
-
 Compile Verilog Files and Run Simulation:
 ```bash
 iverilog <rtl_name.v> <tb_name.v>
