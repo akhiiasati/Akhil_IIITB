@@ -820,15 +820,17 @@ A flip-flop is a fundamental building block in digital electronics, designed to 
 
 Flip-flops come in various types, each with specific features. The D flip-flop stores and outputs the value of its data input, while the JK flip-flop allows toggling, setting, or clearing the stored value based on its inputs. The T flip-flop toggles its output based on the clock and T input, and the SR flip-flop allows setting or resetting its output based on its inputs. These flip-flop types offer versatile solutions for various digital design requirements.
 
-Propogation Delay:
-
-Propagation delay is the time required for a change in an input signal to be fully reflected in the corresponding output signal of a digital circuit or device. It encompasses the time taken for the signal to propagate through various components, such as gates, wires, and interconnects, from the input to the output. Propagation delay is a fundamental parameter that affects the speed and timing accuracy of digital systems and plays a crucial role in determining the maximum achievable operating frequency and overall performance of electronic circuits.
-
 ### Why Flops?
 
 Let's understand this with the picture below.
 
 ![IMG20230815120124](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/24d56b0d-cf1a-4b8c-8174-24898625ef2b)
+
+Propogation Delay:
+
+Before analyzing the circuit above, it's important to understand a key concept in digital circuits: propagation delay.
+
+Propagation delay is the time required for a change in an input signal to be fully reflected in the corresponding output signal of a digital circuit or device. It encompasses the time taken for the signal to propagate through various components, such as gates, wires, and interconnects, from the input to the output. Propagation delay is a fundamental parameter that affects the speed and timing accuracy of digital systems and plays a crucial role in determining the maximum achievable operating frequency and overall performance of electronic circuits.
 
 The propagation delay for the OR gate is 1ns, while for the AND gate, it is 2ns. Initially, the values of a, b, and c are 0, 0, and 1 respectively, with internal node i0 set at 0, and output Y at a high state. At t=0ns, a change occurs in the inputs as a, b, and c transition to 1, 1, and 0 respectively. Due to the propagation delays of the AND and OR gates, at t=1ns, the output node transitions from high to low, driven by both i0 and c being at 0. By t=2ns, internal node i0 changes from 0 to 1, and inputs to the OR gate become 1 and 0. With the OR gate's 1ns propagation delay, the output Y becomes high at 3ns and stabilizes. However, between 1ns and 3ns, an undesired transition occurred in the output, causing a glitch.
 
