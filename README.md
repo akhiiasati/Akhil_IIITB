@@ -1128,6 +1128,46 @@ The circuit's operational frequency is bounded by the capabilities of its indivi
 
 picture:
 
+### Demonstration of Sequential Optimizsation:
+
+Simulation steps :
+```bash
+iverilog <rtl_name.v> <tb_name.v>
+./a.out
+gtkwave <dump_file_name.vcd>
+```
+
+Generating netlist steps :
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog <module_name.v> 
+synth -top <top_module_name>
+opt_clean -purge
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+show
+write_verilog -noattr <netlist_name.v>
+```
+### Example:
+
+Verilog code:
+```bash
+module dff_const2(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b1;
+	else
+		q <= 1'b1;
+end
+endmodule
+```
+Circuit:
+picture
+Output:
+
+
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
 ## Day 5: If, case, for loop and for generate
