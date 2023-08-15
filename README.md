@@ -1469,9 +1469,147 @@ These constructs enable decision-making and action based on varying conditions, 
 
 Since if statement is priority based the equivalent hardware realization of the if - else if - else is shown below :
 
+![WhatsApp Image 2023-08-15 at 21 47 25](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/68f4f787-440e-4b45-9f5c-fdb3a6a1244b)
+
+In terms of hardware, cond1 receives the highest priority, followed by cond2 as the second priority, and finally, the else part receives the least priority. From a code perspective, if any of the conditions evaluates to true, the corresponding code block associated with that condition is executed. After the execution of the relevant code block, the control exits the entire "if-else" statement, meaning the remaining conditions are not evaluated, and the program proceeds to execute the statements following the "if-else" block.
+
+Caution with "if" Statements
+It's important to be cautious when coding "if-else" statements to avoid unintended behaviors. Improperly coded "if-else" statements, such as those with missing or incomplete conditions, can lead to the inference of latches. An inferred latch is an unintended storage element that may be introduced into a hardware design when a synthesizer cannot determine a unique value for a signal under certain conditions. This situation arises when a signal is assigned a value inside an "if-else" block without accounting for all potential conditions.
+
+For instance, consider the following code snippet:
+
+```bash
+if(cond1)
+	y=a;
+else if(cond2)
+	y=b;
+```
+In this code else part is not given. As a result if both the condition evaluates to false then the hardware will latch i.e, it will retain the previous value and crete the combinational loop. The hardware and the logic diagram realization of the code is shown below 
+
+![comb_loop](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/69a98d00-aebc-44bb-b06c-3f2e8dc361e2)
+![hardware_comb_loop](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a808725b-1d05-4c8c-af4e-e0e222c5b3c8)
 
 
+Latches should only be present when intended. For instance, in a counter, an incomplete "if" statement may inadvertently lead to latch creation. Take a look at the provided counter code snippet:
 
+![counter_latch](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/09b67277-58f3-4ae9-9d5b-c0d85bf82c1d)
+
+### Case Statement
+Both "if" and "case" statements are utilized within the "always" block. Variables assigned within the "case" should be of the "reg" data type. The "case" statement facilitates multi-way branching based on an expression's value. It offers an alternative to employing multiple "if-else" statements when comparing a single value to a set of potential values. Contrasting the two, the "case" statement lacks priority and results in a single multiplexer with 2^n inputs. On the other hand, the "if-else" statement is priority-based and leads to the inference of multiple 2:1 multiplexers.
+
+Syntax for case statement
+
+```bash
+case (expression)
+    value_1: // Code to execute if expression matches value_1
+    value_2: // Code to execute if expression matches value_2
+    // ...
+    value_n: // Code to execute if expression matches value_n
+    default: // Code to execute if none of the values match
+endcase
+```
+cosider an example code shown below:
+```bash
+
+always @(*) begin
+	case(sel)
+		2'b00 : y=a;
+		2'b01 : y=b;
+		2'b10 : y=c;
+		2'b11 : y=d;
+	endcase
+end
+
+```
+
+### Caveats with Case Statement
+
+The "case" statement in Verilog is a powerful construct for implementing multi-way branching based on the value of an expression. However, there are certain pitfalls and considerations to keep in mind when using the "case" statement to ensure correct and predictable behavior in your digital designs.
+
+1. Incomplete Case Statement:
+
+An incomplete "case" statement is one where not all possible values of the expression are covered by value cases. This can lead to the inference of unintended latches in the synthesized circuit. For instance:
+
+```bash
+always @(*) begin
+    case(sel)
+        2'b00 : y = a;
+        2'b01 : y = b;
+    endcase
+end
+```
+In this code, the values of sel corresponding to 2'b10 and 2'b11 are not specified, leading to the inference of a latch. To avoid this, it is recommended to include a default case that covers all possible values of the expression:
+
+```bash
+always @(*) begin
+    case(sel)
+        2'b00 : y = a;
+        2'b01 : y = b;
+        default : y = c;
+    endcase
+end
+```
+
+2. Partial Assignment:
+   
+Partial assignments within a "case" statement can also lead to undesirable behavior. Consider the following code:
+
+```bash
+always @(*) begin
+    case(sel)
+        2'b00 : begin x = a; y = b; end
+        2'b10 : y = a;
+        default : begin x = c; y = d; end
+    endcase
+end
+```
+
+When sel is 2'b10, the value of x is not assigned. This partial assignment can result in the inference of a latch. To prevent this, ensure that all variables are fully assigned within each case block.
+
+3. Overlapping Case:
+   
+The "case" statement evaluates all possible value cases, even if a match has been found. Unlike the "if" statement, where once a condition is satisfied, subsequent conditions are not checked, the "case" statement evaluates all matching conditions. This can lead to unexpected behavior, especially when overlapping conditions are present:
+
+```bash
+always @(*) begin
+    case(sel)
+        2'b00 : body1;
+        2'b01 : body2;
+        2'b10 : body3;
+        2'b1? : body4;
+    endcase
+end
+```
+In this code, when sel is 2'b10, both body3 and body4 will be executed since 2'b1? matches both 2'b10 and 2'b11. This can result in unpredictable outputs and unintended behavior.
+
+To mitigate these issues, it is crucial to thoroughly test and validate your Verilog code, ensuring that all possible scenarios are accounted for and that assignments within the "case" statement are complete and unambiguous. Careful consideration and adherence to proper coding practices will help avoid the pitfalls associated with the "case" statement and lead to robust and reliable digital designs.
+
+### Demonstration of inferred latches in if statement
+
+Simulation steps :
+```bash
+iverilog <rtl_name.v> <tb_name.v>
+./a.out
+gtkwave <dump_file_name.vcd>
+```
+Generating netlist steps :
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog <module_name.v> 
+synth -top <top_module_name>
+# opt_clean -purge # If optimisation has to be done
+# dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib # if sequential circuit is used 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+show
+write_verilog -noattr <netlist_name.v>
+```
+Steps to perform GLS:
+```bash
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v <netlist_name.v> <tb_name.v>
+./a.out
+gtkwave <dump_file_name.vcd>
+```
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
