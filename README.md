@@ -1236,7 +1236,10 @@ Synthesis Output:
 ![Screenshot from 2023-08-15 19-26-46](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/53b884d7-4429-405b-be2f-55b994103a5d)
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+
 - [GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking statements](#gls-synthesis-simulation-mismatch-and-blocking/non-blocking-statements)
+
+## GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking statements
 
 ### Gate Level Simulation:
 Gate-level simulation is a method used to verify the functionality of digital circuit designs at the lowest level of abstraction, where the circuit is represented by individual logic gates and flip-flops. In gate-level simulation, the design is described using gate-level netlists, which specify the connections between logic gates and the signals they manipulate.
@@ -1306,7 +1309,167 @@ Non-blocking Statements:
 
 Non-blocking statements allow concurrent execution of assignments within an "always" block. In a non-blocking assignment, the RHS is evaluated for the current time step, but the assignment to the LHS is deferred to the end of the time step, ensuring that all non-blocking assignments occur simultaneously and without interfering with each other.
 
-## GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking statements
+Example 1: Consider the verilog code given below:
+
+```bash
+module code(
+	input clk,reset,d,
+	output reg q
+)
+	reg q0;
+	always @(posedge clk, posedge reset) begin
+		if(reset) begin
+			q=1'b0;
+			q0=1'b0;
+		end
+		else begin
+			q = q0; //Line 1
+			q0=d; // Line 2
+		end
+	end
+endmodule
+```
+The purpose of this code is to establish a 2-bit shift register. By utilizing blocking assignments in both Line 1 and Line 2, these lines are executed sequentially. In the initial step, Line 1 generates a flip-flop with q0 as its input and q as its output. Subsequently, Line 2 creates a second flip-flop with d as its input and q0 as its output. As a result, these two flip-flops are interconnected, forming a 2-bit shift register as depicted below:
+
+Consider the below code:
+
+```bash
+module code(
+	input clk,reset,d,
+	output reg q
+)
+	reg q0;
+	always @(posedge clk, posedge reset) begin
+		if(reset) begin
+			q=1'b0;
+			q0=1'b0;
+		end
+		else begin
+			q0 = d; //Line 1
+			q=q0; // Line 2
+		end
+	end
+endmodule
+```
+picture
+
+This code bears resemblance to the previous one, with the distinction that line 1 and line 2 have been swapped. Utilizing blocking assignment in both line 1 and line 2 ensures sequential execution. Initially, line 1 generates a D flip-flop, taking d as its input and producing q0 as its output. Subsequently, line 2 is executed. As q0 is already established, assigning q to q0 results in the creation of a wire. Consequently, a single flip-flop is inferred instead of two. The corresponding circuit for this code is illustrated below:
+
+### Understanding Gate-Level Simulation (GLS) and Synthesis-Simulation Mismatch
+
+Simulation steps :
+```bash
+iverilog <rtl_name.v> <tb_name.v>
+./a.out
+gtkwave <dump_file_name.vcd>
+```
+Generating netlist steps :
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog <module_name.v> 
+synth -top <top_module_name>
+# opt_clean -purge # If optimisation has to be done
+# dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib # if sequential circuit is used 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+show
+write_verilog -noattr <netlist_name.v>
+```
+Steps to perform GLS:
+```bash
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v <netlist_name.v> <tb_name.v>
+./a.out
+gtkwave <dump_file_name.vcd>
+```
+Let's understand the above concept with few examples:
+
+### Example 1:
+
+Consider the below verilog code:
+
+```bash
+module ternary_operator_mux (
+    input i0,
+    input i1,
+    input sel,
+    output y
+);
+
+    assign y = sel ? i1 : i0;
+
+endmodule
+```
+This module represents a basic multiplexer that selects between two input signals (i0 and i1) based on the value of the sel input. If sel is 1, the output y will be the value of i1, and if sel is 0, the output y will be the value of i0.
+
+Output of Simulation:
+
+Synthesis result:
+
+netlist:
+
+GLS:
+
+Note: In this Example there is no synthesis and simulation mismatch.
+
+### Exmaple 2:
+Consider the Verilog code provided below:
+```bash
+module bad_mux (
+    input i0,
+    input i1,
+    input sel,
+    output reg y
+);
+    always @ (sel)
+    begin
+        if (sel)
+            y <= i1;
+        else
+            y <= i0;
+    end
+endmodule
+```
+
+In this code, a simple multiplexer is implemented using a procedural `always` block. The output signal `y` is assigned either the value of input `i0` or `i1` based on the value of the select signal `sel`. However, an issue arises due to the sensitivity list of the `always` block, which includes only the `sel` signal. As a result, the RTL (Register Transfer Level) simulation of this code may not produce accurate results and may not match the expected specification.
+
+Output of Simulation:
+
+Synthesis result:
+
+netlist:
+
+GLS:
+
+Note: In this scenario, a synthesis and simulation mismatch occurs. During the synthesis process, Yosys corrects the sensitivity list error that was present in the original code.
+
+During synthesis, Yosys analyzes the code and automatically adjusts certain aspects to optimize the design and make it suitable for hardware implementation. In this specific case, Yosys identifies the sensitivity list issue and makes the necessary corrections to ensure proper functionality in the synthesized netlist.
+
+### Exmaple 3:
+
+Consider the below verilog code:
+```bash
+module blocking_caveat (input a , input b , input c, output reg d);
+    reg x;
+
+    always @ (*)
+    begin
+        d = x & c; // Line 1
+        x = a | b; // Line 2
+    end
+endmodule
+```
+
+In the above Verilog code, an issue arises because the signal 'x' is used in a calculation without being explicitly initialized. This can lead to differing behavior between simulation and synthesis stages. Such cases may result in unintended latches being inferred during synthesis, causing delays and undesirable effects in the design. To avoid this, it's crucial to ensure proper signal initialization to maintain consistent behavior throughout the design process.
+
+Output of Simulation:
+
+Synthesis result:
+
+netlist:
+
+GLS:
+
+Note: In this scenario, a synthesis-simulation mismatch occurs. During the synthesis process, Yosys identifies and corrects the latch error present in the code, ensuring proper functionality and behavior of the circuit. This highlights the significance of synthesis tools in detecting and rectifying potential issues that may arise due to improper coding practices.
 
 ## Day 5: If, case, for loop and for generate
 
