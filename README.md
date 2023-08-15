@@ -1486,13 +1486,12 @@ else if(cond2)
 ```
 In this code else part is not given. As a result if both the condition evaluates to false then the hardware will latch i.e, it will retain the previous value and crete the combinational loop. The hardware and the logic diagram realization of the code is shown below 
 
-![comb_loop](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/69a98d00-aebc-44bb-b06c-3f2e8dc361e2)
-![hardware_comb_loop](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a808725b-1d05-4c8c-af4e-e0e222c5b3c8)
+![WhatsApp Image 2023-08-15 at 22 36 07](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/bc4db9c2-9145-429d-902e-2bda732e79d6)
 
 
 Latches should only be present when intended. For instance, in a counter, an incomplete "if" statement may inadvertently lead to latch creation. Take a look at the provided counter code snippet:
 
-![counter_latch](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/09b67277-58f3-4ae9-9d5b-c0d85bf82c1d)
+![WhatsApp Image 2023-08-15 at 22 36 07](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/db2ec37c-de82-402a-81bd-a78848e782fd)
 
 ### Case Statement
 Both "if" and "case" statements are utilized within the "always" block. Variables assigned within the "case" should be of the "reg" data type. The "case" statement facilitates multi-way branching based on an expression's value. It offers an alternative to employing multiple "if-else" statements when comparing a single value to a set of potential values. Contrasting the two, the "case" statement lacks priority and results in a single multiplexer with 2^n inputs. On the other hand, the "if-else" statement is priority-based and leads to the inference of multiple 2:1 multiplexers.
