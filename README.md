@@ -640,6 +640,7 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
 - [Part C: Various Flop Coding Styles and optimization](#part-c-various-flop-coding-styles-and-optimization)
   - [Flip Flops](#flip-flops)
   - [Why Flops?](#why-flops)
+  - [Lab flop synthesis simulations](#lab-flop-synthesis-simulations)
 
 ### Part A: Introduction to timing .libs
 In this section, we will take a detailed look at the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, which is being utilized in our lab.
@@ -836,6 +837,8 @@ The propagation delay for the OR gate is 1ns, while for the AND gate, it is 2ns.
 
 To mitigate glitches, a D flip-flop can be connected at the output, ensuring changes occur only at the rising or falling edge of the clock signal. While flip-flops typically require data and clock inputs, the challenge lies in their initial state being unknown. To resolve this, two additional inputs, preset/set and reset, are introduced to establish the flip-flop's starting value. These extra inputs can be synchronous or asynchronous with the clock signal.
 ![IMG20230815124934](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/6d2d04be-84e5-4ecd-a884-d20aa86de7f5)
+
+### Lab flop synthesis simulations
 
 ## Day 3: Combinational and sequential optmizations
 
