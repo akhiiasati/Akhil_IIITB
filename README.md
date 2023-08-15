@@ -922,6 +922,8 @@ end
 endmodule
 ```
 Output:
+![Screenshot from 2023-08-15 15-00-56](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/56baccc4-5f56-4162-9187-f5ca66f61629)
+![Screenshot from 2023-08-15 15-19-15](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/5ed73dc7-819f-4f4b-ac1b-38593a943708)
 
 ## Day 3: Combinational and sequential optmizations
 
