@@ -1015,6 +1015,7 @@ The Verilog module mult8 takes a 3-bit input a and generates a 6-bit output y. I
 ## Day 3: Combinational and sequential optmizations
 - [Part A: Logic Optimization](part-a-logic-optimization)
   - [Combinational Optimisations](#combinational-optimisations)
+  - [Combinational Optimizsation Demonstration](#combinational-optimizsation-demonstration)
   - [Sequential Optimisations](#sequential-optimisations)
 
 ### Part A: Logic Optimization 
@@ -1049,8 +1050,33 @@ assign y = a?(b?c:(c?a:0)):(!c);
 
 The Verilog statement assign y = a?(b?c:(c?a:0)):(!c); uses the ternary operator to create a multiplexer-like structure. The output y is determined by the condition a, selecting between different values based on the states of b and c. When a is true, the ternary expression b?c:(c?a:0) guides the output, and when a is false, y becomes the logical NOT of c. This logic is realized through a combination of multiplexers and logical operations, illustrating how the ternary operator can efficiently represent complex conditional logic in a digital circuit.
 
-![IMG20230815170800](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/ba6d2a3f-a611-45d0-9e3d-3cfc68605517)
+![IMG20230815170800](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/ba6d2a3f-a611-45d0-9e3d-3cfc68605517) 
 
+### Combinational Optimizsation Demonstration
+
+Steps to generate the netlist for the below circuits:
+
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog <module_name.v> 
+synth -top <top_module_name>
+# flatten # Use if multiple modules are present
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+show
+write_verilog -noattr <netlist_name.v>
+```
+
+Note: In Yosys, the "opt_clean" command is used to perform additional optimization and clean-up of the design after initial synthesis and optimization steps. It helps further refine the design by removing unused logic, optimizing the circuit structure, and reducing resource consumption. This command is part of the Yosys synthesis flow and contributes to generating a more efficient and optimized netlist for subsequent stages of the design process.
+
+### Example 1:
+
+Verilog Code:
+
+```bash
+
+```
 ### Sequential Optimisations
 
 Sequential optimizations refine the performance of sequential logic circuits by applying techniques such as sequential constant propagation, state optimization, retiming, and sequential logic cloning. These methods enhance efficiency, reduce complexity, and improve timing, ensuring that sequential circuits operate optimally and meet design objectives.
@@ -1064,6 +1090,32 @@ Let's analyze it with the help of below circuit:
 ![IMG20230815174502](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/06d37b4e-786e-4c36-b806-75ff69419485)
 
 The D flip-flop dshown in the above picture is positive-edge triggered with an asynchronous reset, and its data input D is consistently connected to ground, representing a logic low state. Upon applying a reset, the flip-flop's output becomes low. When the reset is deasserted, the output remains low. Consequently, one input of the NAND gate is perpetually low, causing the output Y to remain in a high state (logic 1 or VDD). Thus, optimizing this circuit involves directly connecting the output port Y to VDD, the supply voltage.
+
+### 2. State Optimisation:
+
+State optimization involves refining the states and transitions within a finite state machine to reduce complexity and enhance performance. By eliminating redundant states and minimizing unnecessary state transitions, this technique streamlines the logic design, resulting in more efficient and faster sequential circuits.
+
+### 3. Sequential Logic Cloning:
+
+Sequential Logic Cloning refers to the process of duplicating existing sequential logic elements within a circuit to optimize performance. This technique involves replicating specific sections of logic, often with slight modifications, to enhance timing, achieve better floorplan utilization, and meet design constraints. By strategically cloning sequential elements, designers can achieve improved circuit performance and address specific requirements in the layout and timing of the design.
+
+If flop A demonstrates a considerable positive slack, while flops B and C are situated distantly from flop A, it can lead to substantial routing delays between A to B and A to C. To counteract this issue, the approach involves replicating or cloning both flop A and its associated combinational logic 2 along the paths of flops B and C, as depicted in the figure. This strategic replication leverages the ample slack of flop A, thereby offsetting any additional delay introduced through the cloning process. Consequently, the overall delay in the circuit is primarily influenced by the performance of flops B and C.
+
+picture
+
+### Retiming:
+
+Retiming is a powerful sequential optimization technique aimed at enhancing the performance of digital circuits. It involves the strategic relocation of registers (flip-flops) within a circuit to achieve a better balance of timing paths and improve overall speed. By shifting registers to more favorable locations, retiming minimizes critical path delays, reduces setup and hold time violations, and enhances circuit timing. This technique proves particularly effective in achieving better clock frequency and meeting design constraints for high-performance digital systems.
+
+picture:
+
+The operational frequency of a circuit is contingent upon its propagation delay and setup time. In a scenario where C-Q delay and setup time are both 0ns, and finite propagation delays characterize the combinational segments, the circuit's maximum clock frequency hinges on the propagation delays of these segments. Specifically, for the path from flop A to B with a 5ns propagation delay, the circuit can achieve a maximum frequency of 200MHz. Similarly, the path from flop B to C, featuring a 2ns propagation delay, permits a maximum frequency of 500MHz. Consequently, the effective frequency is determined by the more conservative value, yielding an overall operational frequency of 200MHz.
+
+Assume that a segment of the combinational logic located between flop B and C is strategically interchanged with the combinational logic positioned between flop A and B. This rearrangement is orchestrated to diminish the propagation delay within the circuitry connecting flop A and flop B, resulting in a reduction of overall delay for this segment. However, it is essential to acknowledge that this adjustment may lead to a slight increment in the propagation delay for the circuitry connecting flop B and flop C. This trade-off in propagation delays aims to optimize specific timing paths within the circuit, aligning with design objectives and priorities, as illustrated below:
+
+The circuit's operational frequency is bounded by the capabilities of its individual segments. The section between flop A and flop B can sustain a maximum frequency of 250MHz, while the segment between flop B and flop C operates optimally at 333MHz. The resultant effective frequency is determined by the more conservative of the two, amounting to 250MHz. Notably, after implementing retiming, this effective maximum frequency has observed an increase, exemplifying the improved efficiency achieved through strategic optimization.
+
+picture:
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
