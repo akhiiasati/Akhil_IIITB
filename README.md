@@ -941,10 +941,12 @@ Here's a truth table to summarize the behavior of a D flip-flop with synchronous
 
 Verilog Code:
 ```bash
-module dff_asyncres ( input clk ,  input async_reset , input d , output reg q );
+module dff_asyncres_syncres ( input clk , input async_reset , input sync_reset , input d , output reg q );
 always @ (posedge clk , posedge async_reset)
 begin
 	if(async_reset)
+		q <= 1'b0;
+	else if (sync_reset)
 		q <= 1'b0;
 	else	
 		q <= d;
@@ -952,6 +954,9 @@ end
 endmodule
 ```
 Output:
+
+![Screenshot from 2023-08-15 15-28-01](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/8977a840-a385-4a35-83dc-0e36b15197b4)
+![Screenshot from 2023-08-15 15-29-54](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/60c84a14-7df7-412b-b7c5-757a952cef32)
 
 ## Day 3: Combinational and sequential optmizations
 
