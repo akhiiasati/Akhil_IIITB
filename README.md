@@ -890,7 +890,7 @@ end
 endmodule
 ```
 Output:
-
+![Screenshot from 2023-08-15 13-28-52](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/16dbc960-e870-44a1-b7f2-4eb4f4340e69)
 ## Day 3: Combinational and sequential optmizations
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
