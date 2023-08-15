@@ -872,10 +872,12 @@ These combined steps cover both simulation and netlist generation for flip-flop 
 A D flip-flop with a synchronous reset is a digital circuit element that stores data based on clock edges. The primary input (D) sets the stored value, updated during clock transitions. The synchronous reset input enables controlled resetting of the flip-flop's state, ensuring reliable and predictable behavior in digital designs. This component plays a vital role in data storage and controlled initialization within digital systems.
 
 Here's a truth table to summarize the behavior of a D flip-flop with a synchronous reset:
-Clock	Reset	D	Q (next state)
-Rising	0	0	0
-Rising	0	1	1
-Rising	1	X	Reset Value
+| Clock   | Reset | D   | Q (next state) |
+| ------- | ----- | --- | ------------- |
+| Rising  | 0     | 0   | 0             |
+| Rising  | 0     | 1   | 1             |
+| Rising  | 1     | X   | Reset Value   |
+
 
 Verilog Code:
 ```bash
