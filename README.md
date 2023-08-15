@@ -975,7 +975,7 @@ endmodule
 ```
 Note: above code present in verilog_files folder.
 
-The above code performs a multiplication of the input number by 2. As the input is a 3-bit binary number, the corresponding input and output combinations are as follows:
+The Verilog module defined as mul2 takes a 3-bit input vector a and generates a 4-bit output vector y. The operation performed within the module is a multiplication by 2, realized through a shift-left operation. The input vector a is effectively doubled by moving its binary representation one position to the left, and the result is assigned to the output vector y. This module serves as a simple example of combinational logic, illustrating how basic arithmetic operations can be implemented using Verilog.Input and output combinations are as follows:
 
 | a2 a1 a0 | y3 y2 y1 y0 |
 |----------|-------------|
@@ -990,6 +990,27 @@ The above code performs a multiplication of the input number by 2. As the input 
 
 
 In the output, y0 is consistently 0, and the code implementation requires proper wiring of the input bits to the output and grounding the y0 bit. The netlist representation of the design is illustrated below.
+
+![Screenshot from 2023-08-15 16-04-02](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/b7d1bb05-793c-4878-8f04-44d2a2607f63)
+![Screenshot from 2023-08-15 16-04-17](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/2368ef37-d52a-461f-833d-f728b0441201)
+![Screenshot from 2023-08-15 16-05-25](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/133c437b-03b7-49a4-95a6-f02c4bbbbe8f)
+
+### Example 2:
+
+Verilog Code:
+
+```bash
+module mult8 (input [2:0] a , output [5:0] y);
+	assign y = a * 9;
+endmodule
+```
+Note: above code present in verilog_files folder.
+
+The Verilog module mult8 takes a 3-bit input a and generates a 6-bit output y. It achieves multiplication by 9 by first doubling the input (a * 2) and then adding the original input value (a + a * 2). This approach leverages a shift-left operation for multiplication by 2, offering a simple illustration of how arithmetic operations can be implemented in digital circuits using Verilog.
+
+![Screenshot from 2023-08-15 16-11-44](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/1a594169-0dbd-4e20-bd13-dd4f1b29a217)
+![Screenshot from 2023-08-15 16-12-15](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/465f2d46-ce84-437f-bccd-4913abffa908)
+![Screenshot from 2023-08-15 16-13-06](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/3b83b698-91af-47cb-b213-0302283719c3)
 
 ## Day 3: Combinational and sequential optmizations
 
