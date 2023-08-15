@@ -1401,13 +1401,13 @@ endmodule
 ```
 This module represents a basic multiplexer that selects between two input signals (i0 and i1) based on the value of the sel input. If sel is 1, the output y will be the value of i1, and if sel is 0, the output y will be the value of i0.
 
-Output of Simulation:
+Output:
 
-Synthesis result:
-
-netlist:
-
-GLS:
+![Screenshot from 2023-08-15 21-09-42](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/db921cb4-c75b-4088-a8b1-450578ebaf81)
+![Screenshot from 2023-08-15 21-12-03](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/47fcad0a-0515-4a2e-92bb-534858116691)
+![Screenshot from 2023-08-15 21-12-50](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/28021d12-23ea-4ef4-8dcd-e5aa87bab81a)
+![Screenshot from 2023-08-15 21-14-35](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/607995f9-dc8c-4838-9521-2c686a2dcb6e)
+![Screenshot from 2023-08-15 21-23-54](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/610f3a11-37de-421c-b920-85e7059e4a7d)
 
 Note: In this Example there is no synthesis and simulation mismatch.
 
@@ -1432,44 +1432,18 @@ endmodule
 
 In this code, a simple multiplexer is implemented using a procedural `always` block. The output signal `y` is assigned either the value of input `i0` or `i1` based on the value of the select signal `sel`. However, an issue arises due to the sensitivity list of the `always` block, which includes only the `sel` signal. As a result, the RTL (Register Transfer Level) simulation of this code may not produce accurate results and may not match the expected specification.
 
-Output of Simulation:
+Output:
 
-Synthesis result:
-
-netlist:
-
-GLS:
+![Screenshot from 2023-08-15 21-26-45](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a6796225-a29b-48c1-b51f-87253ee46c35)
+![Screenshot from 2023-08-15 21-27-40](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/f5085a70-889f-48b4-a6e7-98600e5b076e)
+![Screenshot from 2023-08-15 21-28-07](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/8cd4034f-48b3-43f7-acf8-676d384ca79c)
+![Screenshot from 2023-08-15 21-28-46](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/49708c3f-18b5-4b71-a336-034b64333917)
+![Screenshot from 2023-08-15 21-30-00](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/9ddaf168-0109-4398-8e0b-d473143d5979)
 
 Note: In this scenario, a synthesis and simulation mismatch occurs. During the synthesis process, Yosys corrects the sensitivity list error that was present in the original code.
 
 During synthesis, Yosys analyzes the code and automatically adjusts certain aspects to optimize the design and make it suitable for hardware implementation. In this specific case, Yosys identifies the sensitivity list issue and makes the necessary corrections to ensure proper functionality in the synthesized netlist.
 
-### Exmaple 3:
-
-Consider the below verilog code:
-```bash
-module blocking_caveat (input a , input b , input c, output reg d);
-    reg x;
-
-    always @ (*)
-    begin
-        d = x & c; // Line 1
-        x = a | b; // Line 2
-    end
-endmodule
-```
-
-In the above Verilog code, an issue arises because the signal 'x' is used in a calculation without being explicitly initialized. This can lead to differing behavior between simulation and synthesis stages. Such cases may result in unintended latches being inferred during synthesis, causing delays and undesirable effects in the design. To avoid this, it's crucial to ensure proper signal initialization to maintain consistent behavior throughout the design process.
-
-Output of Simulation:
-
-Synthesis result:
-
-netlist:
-
-GLS:
-
-Note: In this scenario, a synthesis-simulation mismatch occurs. During the synthesis process, Yosys identifies and corrects the latch error present in the code, ensuring proper functionality and behavior of the circuit. This highlights the significance of synthesis tools in detecting and rectifying potential issues that may arise due to improper coding practices.
 
 ## Day 5: If, case, for loop and for generate
 
