@@ -1013,6 +1013,57 @@ The Verilog module mult8 takes a 3-bit input a and generates a 6-bit output y. I
 ![Screenshot from 2023-08-15 16-13-06](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/3b83b698-91af-47cb-b213-0302283719c3)
 
 ## Day 3: Combinational and sequential optmizations
+- [Part A: Logic Optimization](part-a-logic-optimization)
+  - [Combinational Optimisations](#combinational-optimisations)
+  - [Sequential Optimisations](#sequential-optimisations)
+
+### Part A: Logic Optimization 
+Logic optimization enhances digital circuit performance by streamlining logic equations, minimizing gates, and reducing delays. It simplifies designs, lowers power consumption, and improves timing, ensuring efficient and reliable digital systems.
+
+### Combinational Optimisations
+
+Combinational optimization enhances digital logic circuits by simplifying expressions, reducing gates, and improving speed. Techniques like Boolean algebra, Karnaugh maps, gate-level optimization, and constant propagation are employed to minimize complexity and improve efficiency.
+
+Techniques optimizing combinational circuits are:
+
+### 1.Constant Propagation  Optimisation:
+
+Constant propagation optimization is a technique that simplifies digital circuits by replacing operations involving constants with their actual values. This reduces unnecessary logic operations and improves circuit efficiency. By identifying and utilizing constant values, the circuit's logic expressions become simpler, leading to reduced gate count and faster operation.
+
+Let's understand from below circuit:
+
+![IMG20230815165130](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/b8021e3c-a028-4c65-bc3a-760bbd94b6fe)
+
+The boolean logic inferred is Y = ((AB)+C)'. When A is consistently tied to ground (A = 0), the expression simplifies to C'. In this scenario, the circuit can be further streamlined. Instead of using both an AND gate and a NOR gate, a single NOT gate with input C accomplishes the same logic. While both configurations yield the same result, the optimized design employs fewer transistors than the original circuit shown above. The transistor-level representation of both the original and optimized circuits is depicted below:
+
+
+
+### Boolean Logic Optimisation:
+
+Boolean logic optimization involves refining logical expressions to simplify circuit designs. By applying techniques like Boolean algebra, Karnaugh maps, and gate-level optimization, complex logic equations are streamlined to reduce gate count, propagation delays, and power consumption. This process ensures efficient and effective digital circuitry, enhancing performance while maintaining desired functionality.
+
+Consider the below verilog statement:
+```
+assign y = a?(b?c:(c?a:0)):(!c);
+```
+
+The Verilog statement assign y = a?(b?c:(c?a:0)):(!c); uses the ternary operator to create a multiplexer-like structure. The output y is determined by the condition a, selecting between different values based on the states of b and c. When a is true, the ternary expression b?c:(c?a:0) guides the output, and when a is false, y becomes the logical NOT of c. This logic is realized through a combination of multiplexers and logical operations, illustrating how the ternary operator can efficiently represent complex conditional logic in a digital circuit.
+
+![IMG20230815170800](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/ba6d2a3f-a611-45d0-9e3d-3cfc68605517)
+
+### Sequential Optimisations
+
+Sequential optimizations refine the performance of sequential logic circuits by applying techniques such as sequential constant propagation, state optimization, retiming, and sequential logic cloning. These methods enhance efficiency, reduce complexity, and improve timing, ensuring that sequential circuits operate optimally and meet design objectives.
+
+Techniques optimizing sequential circuits are:
+
+# 1. Sequential Constant Propagation:
+   
+Let's analyze it with the help of below circuit:
+
+![IMG20230815174502](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/06d37b4e-786e-4c36-b806-75ff69419485)
+
+The D flip-flop dshown in the above picture is positive-edge triggered with an asynchronous reset, and its data input D is consistently connected to ground, representing a logic low state. Upon applying a reset, the flip-flop's output becomes low. When the reset is deasserted, the output remains low. Consequently, one input of the NAND gate is perpetually low, causing the output Y to remain in a high state (logic 1 or VDD). Thus, optimizing this circuit involves directly connecting the output port Y to VDD, the supply voltage.
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
