@@ -1228,10 +1228,12 @@ Note: Since the output q is always assigned COUNT[0], the other bits of the coun
 
 Simulation output:
 
+![Screenshot from 2023-08-15 19-20-59](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a1c64b72-47d6-4b06-b743-cef7cfd71af1)
 
 Synthesis Output:
-
-
+![Screenshot from 2023-08-15 19-23-32](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/98063e0e-e830-412a-b841-27e6acc93426)
+![Screenshot from 2023-08-15 19-25-23](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/f99273c6-bb9b-41cb-be6c-99ab662bfe0c)
+![Screenshot from 2023-08-15 19-26-46](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/53b884d7-4429-405b-be2f-55b994103a5d)
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
