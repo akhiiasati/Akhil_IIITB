@@ -639,6 +639,7 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
   - [Submodule Synthesis](#submodule-synthesis)
 - [Part C: Various Flop Coding Styles and optimization](#part-c-various-flop-coding-styles-and-optimization)
   - [Flip Flops](#flip-flops)
+  - [Why Flops?](#why-flops)
 
 ### Part A: Introduction to timing .libs
 In this section, we will take a detailed look at the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, which is being utilized in our lab.
@@ -815,7 +816,19 @@ $ show
 ## Part C: Various Flop Coding Styles and optimization
 ### Flip Flops
 
-A flip-flop is a basic digital circuit element that stores a binary value (0 or 1). It's crucial for memory, sequential operations, and synchronization in electronics. When triggered by a clock signal, a flip-flop captures and holds its input, offering memory and control for various tasks like data storage, state machines, and timing control. Different types of flip-flops cater to specific needs, making them vital building blocks in digital systems.
+A flip-flop is a fundamental building block in digital electronics, designed to store binary information. It plays a crucial role in sequential logic circuits, enabling memory storage, synchronization, and state control. Flip-flops can store a single bit of data, representing either a 0 or a 1, until they receive a clock signal. Once triggered by the clock, a flip-flop captures and retains its input data, making it available at the output. This function is essential for tasks requiring data retention, such as buffering, state machine design, and timing-sensitive operations.
+
+Flip-flops come in various types, each with specific features. The D flip-flop stores and outputs the value of its data input, while the JK flip-flop allows toggling, setting, or clearing the stored value based on its inputs. The T flip-flop toggles its output based on the clock and T input, and the SR flip-flop allows setting or resetting its output based on its inputs. These flip-flop types offer versatile solutions for various digital design requirements.
+
+Propogation Delay:
+
+Propagation delay is the time required for a change in an input signal to be fully reflected in the corresponding output signal of a digital circuit or device. It encompasses the time taken for the signal to propagate through various components, such as gates, wires, and interconnects, from the input to the output. Propagation delay is a fundamental parameter that affects the speed and timing accuracy of digital systems and plays a crucial role in determining the maximum achievable operating frequency and overall performance of electronic circuits.
+
+Why Flops?
+
+Let's understand this with the picture below.
+
+![IMG20230815120124](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/24d56b0d-cf1a-4b8c-8174-24898625ef2b)
 
 The propagation delay for the OR gate is 1ns, while for the AND gate, it is 2ns. Initially, the values of a, b, and c are 0, 0, and 1 respectively, with internal node i0 set at 0, and output Y at a high state. At t=0ns, a change occurs in the inputs as a, b, and c transition to 1, 1, and 0 respectively. Due to the propagation delays of the AND and OR gates, at t=1ns, the output node transitions from high to low, driven by both i0 and c being at 0. By t=2ns, internal node i0 changes from 0 to 1, and inputs to the OR gate become 1 and 0. With the OR gate's 1ns propagation delay, the output Y becomes high at 3ns and stabilizes. However, between 1ns and 3ns, an undesired transition occurred in the output, causing a glitch.
 
