@@ -1683,8 +1683,6 @@ Example Design: Incomplete Case Statement
 
 Consider the Verilog code for an incomplete case statement:
 ```bash
-verilog
-Copy code
 module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
 always @ (*)
 begin
@@ -1694,19 +1692,19 @@ begin
 	endcase
 end
 endmodule
-Description:
 ```
+Output:
+
+![Screenshot from 2023-08-15 22-23-51](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/95705344-a9ac-422b-bbc5-150a7ee8ac9e)
+![Screenshot from 2023-08-15 22-27-56](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/35fdfdf3-b3ba-4dec-94ea-589ee43d80ce)
+![Screenshot from 2023-08-15 22-28-24](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/13623815-3b87-4b51-ae2e-039ee6b31d37)
+![Screenshot from 2023-08-15 22-29-20](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/7565e90f-1a05-42cb-ae69-a0295e03c355)
 
 In this example, an incomplete case statement is used to illustrate the concept of inferred latches. When sel is either 2'b10 or 2'b11, the assignment value of y is not specified, and there is no default statement provided. As a result, the synthesis tool may infer a latch with the enable input (en) connected to sel[1]'. Consequently, when sel equals 2'b10 or 2'b11, the previous output value of y will be retained, exhibiting latch behavior.
 
 This scenario highlights the importance of providing a complete case statement or a default case to avoid the unintentional inference of latches in the synthesized circuit.
 
 By following the above simulation, netlist generation, and GLS steps, we can gain insights into the behavior of the design and identify potential issues like inferred latches.
-
-
-
-
-
 
 
 # References:
