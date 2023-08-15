@@ -1081,7 +1081,7 @@ endmodule
 ```
 Circuit:
 
-picture
+![WhatsApp Image 2023-08-15 at 21 39 25](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/a827ed39-9f4f-40c3-95fb-8ac3863de144)
 
 Synthesis result:
 ![Screenshot from 2023-08-15 18-44-05](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/fe13892b-aefd-4cae-836b-f4cd985f5262)
@@ -1098,7 +1098,7 @@ Techniques optimizing sequential circuits are:
    
 Let's analyze it with the help of below circuit:
 
-![IMG20230815174502](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/06d37b4e-786e-4c36-b806-75ff69419485)
+![WhatsApp Image 2023-08-15 at 21 43 55](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/ce1c8489-694a-4fa6-bd51-fbc502978a80)
 
 The D flip-flop dshown in the above picture is positive-edge triggered with an asynchronous reset, and its data input D is consistently connected to ground, representing a logic low state. Upon applying a reset, the flip-flop's output becomes low. When the reset is deasserted, the output remains low. Consequently, one input of the NAND gate is perpetually low, causing the output Y to remain in a high state (logic 1 or VDD). Thus, optimizing this circuit involves directly connecting the output port Y to VDD, the supply voltage.
 
@@ -1112,21 +1112,15 @@ Sequential Logic Cloning refers to the process of duplicating existing sequentia
 
 If flop A demonstrates a considerable positive slack, while flops B and C are situated distantly from flop A, it can lead to substantial routing delays between A to B and A to C. To counteract this issue, the approach involves replicating or cloning both flop A and its associated combinational logic 2 along the paths of flops B and C, as depicted in the figure. This strategic replication leverages the ample slack of flop A, thereby offsetting any additional delay introduced through the cloning process. Consequently, the overall delay in the circuit is primarily influenced by the performance of flops B and C.
 
-picture
-
 ### Retiming:
 
 Retiming is a powerful sequential optimization technique aimed at enhancing the performance of digital circuits. It involves the strategic relocation of registers (flip-flops) within a circuit to achieve a better balance of timing paths and improve overall speed. By shifting registers to more favorable locations, retiming minimizes critical path delays, reduces setup and hold time violations, and enhances circuit timing. This technique proves particularly effective in achieving better clock frequency and meeting design constraints for high-performance digital systems.
-
-picture:
 
 The operational frequency of a circuit is contingent upon its propagation delay and setup time. In a scenario where C-Q delay and setup time are both 0ns, and finite propagation delays characterize the combinational segments, the circuit's maximum clock frequency hinges on the propagation delays of these segments. Specifically, for the path from flop A to B with a 5ns propagation delay, the circuit can achieve a maximum frequency of 200MHz. Similarly, the path from flop B to C, featuring a 2ns propagation delay, permits a maximum frequency of 500MHz. Consequently, the effective frequency is determined by the more conservative value, yielding an overall operational frequency of 200MHz.
 
 Assume that a segment of the combinational logic located between flop B and C is strategically interchanged with the combinational logic positioned between flop A and B. This rearrangement is orchestrated to diminish the propagation delay within the circuitry connecting flop A and flop B, resulting in a reduction of overall delay for this segment. However, it is essential to acknowledge that this adjustment may lead to a slight increment in the propagation delay for the circuitry connecting flop B and flop C. This trade-off in propagation delays aims to optimize specific timing paths within the circuit, aligning with design objectives and priorities, as illustrated below:
 
 The circuit's operational frequency is bounded by the capabilities of its individual segments. The section between flop A and flop B can sustain a maximum frequency of 250MHz, while the segment between flop B and flop C operates optimally at 333MHz. The resultant effective frequency is determined by the more conservative of the two, amounting to 250MHz. Notably, after implementing retiming, this effective maximum frequency has observed an increase, exemplifying the improved efficiency achieved through strategic optimization.
-
-picture:
 
 ### Demonstration of Sequential Optimizsation:
 
@@ -1351,7 +1345,6 @@ module code(
 	end
 endmodule
 ```
-picture
 
 This code bears resemblance to the previous one, with the distinction that line 1 and line 2 have been swapped. Utilizing blocking assignment in both line 1 and line 2 ensures sequential execution. Initially, line 1 generates a D flip-flop, taking d as its input and producing q0 as its output. Subsequently, line 2 is executed. As q0 is already established, assigning q to q0 results in the creation of a wire. Consequently, a single flip-flop is inferred instead of two. The corresponding circuit for this code is illustrated below:
 
@@ -1446,6 +1439,39 @@ During synthesis, Yosys analyzes the code and automatically adjusts certain aspe
 
 
 ## Day 5: If, case, for loop and for generate
+
+The "if" statement is a conditional construct that executes a specific section of code when a given condition evaluates to true, representing a logic high. Conversely, if the condition is not met, the code within the "else" section is executed. The "if" statement is commonly employed to establish a priority logic.
+
+Syntax for "if-else":
+```bash
+if (condition) begin
+    <code body>
+end
+else begin
+    <code body>
+end
+```
+
+Syntax for "if-else if-else":
+
+```bash
+if (condition1) begin
+    <code body>
+end
+else if (condition2) begin
+    <code body>
+end
+else begin
+    <code body>
+end
+```
+These constructs enable decision-making and action based on varying conditions, enhancing the versatility and functionality of Verilog code.
+
+Since if statement is priority based the equivalent hardware realization of the if - else if - else is shown below :
+
+
+
+
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
