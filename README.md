@@ -1224,6 +1224,14 @@ endmodule
 | 1         1         0         | 1         1         1         |
 | 1         1         1         | 0         0         0         |
 
+Note: Since the output q is always assigned COUNT[0], the other bits of the count are not used and not required. Instead of inferring three flip-flops, upon optimizing the design, it will infer a single D flip-flop and an inverter.
+
+Simulation output:
+
+
+Synthesis Output:
+
+
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
