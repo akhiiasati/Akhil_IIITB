@@ -893,6 +893,36 @@ endmodule
 ```
 Output:
 ![Screenshot from 2023-08-15 13-28-52](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/16dbc960-e870-44a1-b7f2-4eb4f4340e69)
+![Screenshot from 2023-08-15 14-54-53](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/120da32f-ff2c-4120-89f5-d201abb40f4e)
+
+### Circuit 1: D Flip-Flop with asynchronous reset
+
+A D flip-flop with an asynchronous reset is a digital component that adds an extra reset input. Unlike a synchronous reset that works with the clock, this reset input can directly force the flip-flop to a specific state, providing quick and immediate control over its behavior. It's useful when you need to reset the flip-flop independently of the clock's timing, like for quick initialization or error handling in digital circuits.
+
+Here's a truth table to summarize the behavior of a D flip-flop with a synchronous reset:
+| Asynchronous Reset | Clock   | D Input | Q (next state) |
+|-------------------|---------|---------|----------------|
+| 0                 | -       | X       | Previous State |
+| 1                 | -       | X       | Reset Value    |
+| X                 | Rising  | 0       | 0              |
+| X                 | Rising  | 1       | 1              |
+| X                 | Falling | 0       | 0              |
+| X                 | Falling | 1       | 1              |
+
+Verilog Code:
+```bash
+module dff_asyncres ( input clk ,  input async_reset , input d , output reg q );
+always @ (posedge clk , posedge async_reset)
+begin
+	if(async_reset)
+		q <= 1'b0;
+	else	
+		q <= d;
+end
+endmodule
+```
+Output:
+
 ## Day 3: Combinational and sequential optmizations
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
