@@ -1171,6 +1171,60 @@ Output:
 ![Screenshot from 2023-08-15 18-59-39](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/89043bc8-4c6c-4582-95aa-c464e0eb0bbf)
 ![Screenshot from 2023-08-15 19-02-33](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/aeab25cb-e125-4003-91da-2c6cb9e78d21)
 
+### Optimisation of Unused States
+
+Simulation steps :
+```bash
+iverilog <rtl_name.v> <tb_name.v>
+./a.out
+gtkwave <dump_file_name.vcd>
+```
+
+Generating netlist steps :
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog <module_name.v> 
+synth -top <top_module_name>
+opt_clean -purge
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+show
+write_verilog -noattr <netlist_name.v>
+```
+
+Lets take an Exmaple:
+
+### 3-bit counter with asynchronous reset
+
+Verilog Code:
+```bash
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = count[0];
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+| count[2]  count[1]  count[0] | COUNT[2]  COUNT[1]  COUNT[0] |
+|-----------------------------|----------------------------|
+| 0         0         0         | 0         0         1         |
+| 0         0         1         | 0         1         0         |
+| 0         1         0         | 0         1         1         |
+| 0         1         1         | 1         0         0         |
+| 1         0         0         | 1         0         1         |
+| 1         0         1         | 1         1         0         |
+| 1         1         0         | 1         1         1         |
+| 1         1         1         | 0         0         0         |
+
+
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
 ## Day 5: If, case, for loop and for generate
