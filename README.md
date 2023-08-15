@@ -642,6 +642,7 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
   - [Why Flops?](#why-flops)
   - [Lab flop synthesis simulations](#lab-flop-synthesis-simulations)
   - [Analysis of Different Flip Flop circuits](#analysis-of-Different-flip-flop-circuits)
+- [Part D: Optimizations](#part-d-optimizations)
 
 ### Part A: Introduction to timing .libs
 In this section, we will take a detailed look at the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, which is being utilized in our lab.
@@ -957,6 +958,38 @@ Output:
 
 ![Screenshot from 2023-08-15 15-28-01](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/8977a840-a385-4a35-83dc-0e36b15197b4)
 ![Screenshot from 2023-08-15 15-29-54](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/60c84a14-7df7-412b-b7c5-757a952cef32)
+
+### Optimizations
+During synthesis using Yosys, optimizations are applied to improve the efficiency of the logic design. Yosys analyzes and refines the circuit's structure, making it faster, smaller, or more power-efficient. This process involves simplifying logic and optimizing flip-flops. The aim is to create a more effective design that meets performance goals. This helps produce efficient and reliable digital circuits tailored to specific needs.
+
+Let's grasp the concept of optimization through the following two examples:
+
+### Example 1:
+
+Verilog Code:
+
+```bash
+module mul2 (input [2:0] a, output [3:0] y);
+	assign y = a * 2;
+endmodule
+```
+Note: above code present in verilog_files folder.
+
+The above code performs a multiplication of the input number by 2. As the input is a 3-bit binary number, the corresponding input and output combinations are as follows:
+
+| a2 a1 a0 | y3 y2 y1 y0 |
+|----------|-------------|
+| 000      | 0000        |
+| 001      | 0010        |
+| 010      | 0100        |
+| 011      | 0110        |
+| 100      | 1000        |
+| 101      | 1010        |
+| 110      | 1100        |
+| 111      | 1110        |
+
+
+In the output, y0 is consistently 0, and the code implementation requires proper wiring of the input bits to the output and grounding the y0 bit. The netlist representation of the design is illustrated below.
 
 ## Day 3: Combinational and sequential optmizations
 
