@@ -824,7 +824,7 @@ Propogation Delay:
 
 Propagation delay is the time required for a change in an input signal to be fully reflected in the corresponding output signal of a digital circuit or device. It encompasses the time taken for the signal to propagate through various components, such as gates, wires, and interconnects, from the input to the output. Propagation delay is a fundamental parameter that affects the speed and timing accuracy of digital systems and plays a crucial role in determining the maximum achievable operating frequency and overall performance of electronic circuits.
 
-Why Flops?
+### Why Flops?
 
 Let's understand this with the picture below.
 
