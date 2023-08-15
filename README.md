@@ -1629,6 +1629,11 @@ In this code, the absence of an else statement results in the inference of a lat
 
 Output:
 
+![Screenshot from 2023-08-15 22-12-17](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/31a97ef3-4676-401f-a4e4-a929c475aaa9)
+![Screenshot from 2023-08-15 22-13-30](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/2a8e5b65-01c0-453f-8267-3ea9ba928bf7)
+![Screenshot from 2023-08-15 22-14-01](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/1e10da18-8fbc-423d-962b-f7095b90b0b2)
+![Screenshot from 2023-08-15 22-15-22](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/e098bcb2-df16-40a1-8f11-a9ff72053694)
+
 ### Illustration of Inferred Latches in Case Statement
 
 To better understand the concept of inferred latches in Verilog case statements, we will walk through an example design and the steps involved in simulation, netlist generation, and Gate-Level Simulation (GLS).
