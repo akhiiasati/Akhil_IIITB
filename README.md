@@ -641,6 +641,7 @@ Exit Yosys by typing exit or pressing Ctrl + D in the terminal.
   - [Flip Flops](#flip-flops)
   - [Why Flops?](#why-flops)
   - [Lab flop synthesis simulations](#lab-flop-synthesis-simulations)
+  - [Analysis of Different Flip Flop circuits](#analysis-of-Different-flip-flop-circuits)
 
 ### Part A: Introduction to timing .libs
 In this section, we will take a detailed look at the "sky130_fd_sc_hd__tt_025C_1v80.lib" library, which is being utilized in our lab.
@@ -864,6 +865,31 @@ show
 write_verilog -noattr <netlist_name.v>
 ```
 These combined steps cover both simulation and netlist generation for flip-flop circuits.
+
+### Analysis of Different Flip Flop circuits:
+### Circuit 1: D Flip-Flop with synchronous reset
+
+A D flip-flop with a synchronous reset is a digital circuit element that stores data based on clock edges. The primary input (D) sets the stored value, updated during clock transitions. The synchronous reset input enables controlled resetting of the flip-flop's state, ensuring reliable and predictable behavior in digital designs. This component plays a vital role in data storage and controlled initialization within digital systems.
+
+Here's a truth table to summarize the behavior of a D flip-flop with a synchronous reset:
+Clock	Reset	D	Q (next state)
+Rising	0	0	0
+Rising	0	1	1
+Rising	1	X	Reset Value
+
+Verilog Code:
+```bash
+module dff_syncres ( input clk , input async_reset , input sync_reset , input d , output reg q );
+always @ (posedge clk )
+begin
+	if (sync_reset)
+		q <= 1'b0;
+	else	
+		q <= d;
+end
+endmodule
+```
+Output:
 
 ## Day 3: Combinational and sequential optmizations
 
