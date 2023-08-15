@@ -1166,7 +1166,10 @@ endmodule
 Circuit:
 picture
 Output:
-
+![Screenshot from 2023-08-15 18-57-14](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/8d10fcd5-a11c-416f-8261-461e386a7cc2)
+![Screenshot from 2023-08-15 18-58-48](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/b3b4644d-58c5-4b96-9237-35f3a3d1beea)
+![Screenshot from 2023-08-15 18-59-39](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/89043bc8-4c6c-4582-95aa-c464e0eb0bbf)
+![Screenshot from 2023-08-15 19-02-33](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/aeab25cb-e125-4003-91da-2c6cb9e78d21)
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
