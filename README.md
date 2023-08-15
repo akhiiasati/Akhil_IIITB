@@ -817,6 +817,9 @@ $ show
 
 A flip-flop is a basic digital circuit element that stores a binary value (0 or 1). It's crucial for memory, sequential operations, and synchronization in electronics. When triggered by a clock signal, a flip-flop captures and holds its input, offering memory and control for various tasks like data storage, state machines, and timing control. Different types of flip-flops cater to specific needs, making them vital building blocks in digital systems.
 
+The propagation delay for the OR gate is 1ns, while for the AND gate, it is 2ns. Initially, the values of a, b, and c are 0, 0, and 1 respectively, with internal node i0 set at 0, and output Y at a high state. At t=0ns, a change occurs in the inputs as a, b, and c transition to 1, 1, and 0 respectively. Due to the propagation delays of the AND and OR gates, at t=1ns, the output node transitions from high to low, driven by both i0 and c being at 0. By t=2ns, internal node i0 changes from 0 to 1, and inputs to the OR gate become 1 and 0. With the OR gate's 1ns propagation delay, the output Y becomes high at 3ns and stabilizes. However, between 1ns and 3ns, an undesired transition occurred in the output, causing a glitch.
+
+To mitigate glitches, a D flip-flop can be connected at the output, ensuring changes occur only at the rising or falling edge of the clock signal. While flip-flops typically require data and clock inputs, the challenge lies in their initial state being unknown. To resolve this, two additional inputs, preset/set and reset, are introduced to establish the flip-flop's starting value. These extra inputs can be synchronous or asynchronous with the clock signal.
 
 ## Day 3: Combinational and sequential optmizations
 
