@@ -1075,8 +1075,19 @@ Note: In Yosys, the "opt_clean" command is used to perform additional optimizati
 Verilog Code:
 
 ```bash
-
+module opt_check (input a , input b , output y);
+	assign y = a?b:0;
+endmodule
 ```
+Circuit:
+
+picture
+
+Synthesis result:
+![Screenshot from 2023-08-15 18-44-05](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/fe13892b-aefd-4cae-836b-f4cd985f5262)
+![Screenshot from 2023-08-15 18-45-26](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/b4b90ecc-06ca-4ce8-acef-2379a22763a9)
+![Screenshot from 2023-08-15 18-46-24](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/6c4389cc-ee50-48c0-9e6b-492e217ee194)
+
 ### Sequential Optimisations
 
 Sequential optimizations refine the performance of sequential logic circuits by applying techniques such as sequential constant propagation, state optimization, retiming, and sequential logic cloning. These methods enhance efficiency, reduce complexity, and improve timing, ensuring that sequential circuits operate optimally and meet design objectives.
