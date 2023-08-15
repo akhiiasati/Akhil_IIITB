@@ -1610,6 +1610,99 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
 ./a.out
 gtkwave <dump_file_name.vcd>
 ```
+Lets Take an Example:
+
+### Example:
+
+Consider the below verilog code:
+```bash
+module incomp_if (input i0 , input i1 , input i2 , output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+end
+endmodule
+```
+
+In this code, the absence of an else statement results in the inference of a latch, where the input to the enable (en) pin is tied to i0. Consequently, when i0 is set to logic 0, the previous output value will be held and retained.
+
+Output:
+
+### Illustration of Inferred Latches in Case Statement
+
+To better understand the concept of inferred latches in Verilog case statements, we will walk through an example design and the steps involved in simulation, netlist generation, and Gate-Level Simulation (GLS).
+
+Simulation and Netlist Generation Steps:
+
+Compile and simulate the RTL design using Icarus Verilog:
+
+```bash
+iverilog <rtl_name.v> <tb_name.v>
+./a.out
+```
+
+Visualize the simulation results using GTKWave:
+```bash
+gtkwave <dump_file_name.vcd>
+```
+
+Generate the gate-level netlist using Yosys:
+```bash
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog <module_name.v>
+synth -top <top_module_name>
+# opt_clean -purge # If optimization is required
+# dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib # if sequential circuit is used
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog -noattr <netlist_name.v>
+```
+
+Gate-Level Simulation (GLS) Steps:
+
+Compile and perform Gate-Level Simulation using Icarus Verilog:
+
+```bash
+
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v <netlist_name.v> <tb_name.v>
+./a.out
+```
+Analyze the GLS results using GTKWave:
+```bash
+gtkwave <dump_file_name.vcd>
+```
+
+Example Design: Incomplete Case Statement
+
+Consider the Verilog code for an incomplete case statement:
+```bash
+verilog
+Copy code
+module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+	endcase
+end
+endmodule
+Description:
+```
+
+In this example, an incomplete case statement is used to illustrate the concept of inferred latches. When sel is either 2'b10 or 2'b11, the assignment value of y is not specified, and there is no default statement provided. As a result, the synthesis tool may infer a latch with the enable input (en) connected to sel[1]'. Consequently, when sel equals 2'b10 or 2'b11, the previous output value of y will be retained, exhibiting latch behavior.
+
+This scenario highlights the importance of providing a complete case statement or a default case to avoid the unintentional inference of latches in the synthesized circuit.
+
+By following the above simulation, netlist generation, and GLS steps, we can gain insights into the behavior of the design and identify potential issues like inferred latches.
+
+
+
+
+
+
 
 # References:
 - https://iverilog.fandom.com/wiki/Simulation
