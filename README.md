@@ -1236,7 +1236,77 @@ Synthesis Output:
 ![Screenshot from 2023-08-15 19-26-46](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/53b884d7-4429-405b-be2f-55b994103a5d)
 
 ## Day 4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+- [GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking statements](#gls-synthesis-simulation-mismatch-and-blocking/non-blocking-statements)
 
+### Gate Level Simulation:
+Gate-level simulation is a method used to verify the functionality of digital circuit designs at the lowest level of abstraction, where the circuit is represented by individual logic gates and flip-flops. In gate-level simulation, the design is described using gate-level netlists, which specify the connections between logic gates and the signals they manipulate.
+
+During gate-level simulation, the inputs to the circuit are provided, and the simulator simulates the propagation of logic values through the gates and flip-flops, just as they would occur in the physical implementation of the circuit. The simulation produces waveforms that show how the signals change over time, allowing designers to analyze the circuit's behavior, check for correct functionality, and identify potential issues such as timing violations, glitches, or race conditions.
+
+Gate-level simulation is an essential step in the design and verification process of digital circuits, as it helps ensure that the logic gates and flip-flops are connected and functioning correctly before moving on to more complex stages such as layout and physical implementation.
+
+![Screenshot (23)](https://github.com/akhiiasati/Akhil_IIITB/assets/43675821/e3fd719f-29be-4548-b6a4-6c41939ad9e2)
+
+### Synthesis Simulation Mismatch:
+
+Synthesis-simulation mismatch arises from disparities between the behavior of a digital circuit during simulation at the Register Transfer Level (RTL) and its behavior post-synthesis when represented as gate-level netlists. This mismatch can stem from several factors, including:
+
+1. Missing Sensitivity List
+2. Blocking and Non-blocking Assignments
+3. Non-standard Verilog Coding
+
+### Missing Sensitivity List:
+
+Differences in how simulation and synthesis handle sensitivity lists can lead to discrepancies. Properly specifying sensitivity lists in simulation models is crucial for capturing all relevant changes and events.
+
+Let's consider the below verilog code:
+ 
+```bash
+module mux(
+	input i0,i1,s,
+	output reg y
+)
+	always @(sel) begin
+		if(sel)
+			y = i1;
+		else
+			y = i0;
+	end
+endmodule
+```
+Output:
+
+The "always" block exclusively responds to changes in the "sel" signal. Any alteration in the "sel" output initiates a corresponding adjustment in the output value. Nevertheless, as this code represents a multiplexer, the output should also react to modifications in the input. Unfortunately, the output remains unaffected due to the limited sensitivity list, which only includes "sel." Consequently, it fails to follow the input i0 when "sel" is logic 0, resulting in a circuit behavior akin to a latch.
+
+To address this issue, all critical signals must be explicitly included in the sensitivity list. The corrected code is provided below:
+
+```bash
+module mux(
+	input i0,i1,s,
+	output reg y
+)
+	always @(*) begin // always is evaluated whenever any signal changes.
+		if(sel)
+			y = i1;
+		else
+			y = i0;
+	end
+endmodule
+```
+
+### Blocking and Non-Blocking Statements in Verilog:
+
+Blocking and non-blocking statements are fundamental concepts in Verilog that dictate how assignments and updates are executed within procedural blocks like "always" blocks. They play a crucial role in determining the simulation behavior and potential race conditions in your digital designs.
+
+Blocking Statements:
+
+Blocking statements are executed sequentially in the order they appear within the procedural block. Each blocking statement must complete before the next one is executed. In a blocking assignment, the right-hand side (RHS) is evaluated immediately, and the assignment to the left-hand side (LHS) is executed in the current simulation time step. This means that the assigned value is immediately reflected in the LHS variable.
+
+Non-blocking Statements:
+
+Non-blocking statements allow concurrent execution of assignments within an "always" block. In a non-blocking assignment, the RHS is evaluated for the current time step, but the assignment to the LHS is deferred to the end of the time step, ensuring that all non-blocking assignments occur simultaneously and without interfering with each other.
+
+## GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking statements
 
 ## Day 5: If, case, for loop and for generate
 
